@@ -1,0 +1,58 @@
+Benchmark Data Sources
+
+ACLED:
+https://acleddata.com/curated-data-files/
+https://acleddata.com/curated-data-files/#aggregated
+https://acleddata.com/curated-data-files/#regional
+
+Afrobarometer:
+https://www.afrobarometer.org/data/merged-data/
+
+Barrett et al (2022) Civil Unrest Events:
+https://www.sciencedirect.com/science/article/pii/S0304387822000803
+
+CNTS:
+https://www.cntsdata.com/licenses
+
+CSP Database:
+https://www.systemicpeace.org/inscrdata.html
+https://www.systemicpeace.org/
+
+Database of Political Institutions:
+https://datacatalog.worldbank.org/dataset/wps2283-database-political-institutions
+
+Gallup:
+https://wbglibrary.worldbank.org/find/databases
+https://analyticscampus-gallup-com.eu1.proxy.openathens.net/Tables/
+
+GDELT:
+https://www.gdeltproject.org/
+
+ICRG: kostenpflichtig
+https://www.prsgroup.com/explore-our-products/icrg/
+
+Powell et al (2011) Coups:
+https://www.uky.edu/~clthyn2/coup_data/home.htm
+
+UCDP dataset:
+https://ucdp.uu.se/downloads/
+
+World Bank Worldwide Governance Indicators:
+www.govindicators.org
+https://www.worldbank.org/en/publication/worldwide-governance-indicators
+
+World Handbook of Political Indicators IV (WHIV):
+https://sociology.osu.edu/worldhandbook/world-handbook-information-frequently-asked-questions
+
+World Uncertainty Index:
+https://worlduncertaintyindex.com/data/
+
+
+
+
+
+
+
+
+
+

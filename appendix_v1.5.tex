@@ -1,0 +1,616 @@
+
+\setcounter{page}{1}
+\setcounter{footnote}{0}
+
+\renewcommand\thefigure{\thesection.\arabic{figure}} 
+\renewcommand\thetable{\thesection.\arabic{table}}  
+\setcounter{table}{0}
+\setcounter{figure}{0}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Figures} \label{app:figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
+
+\begin{figure}[h]
+\centering
+\caption{Map of Selected Countries}
+\includegraphics[width=\textwidth]{Figures/africa_map.pdf}
+\label{fig:africa_map}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} The figure shows a map of Africa with the countries included in the study highlighted in red: Benin, Burkina Faso, Cameroon, Central African Republic, Chad, Côte d'Ivoire, Democratic Republic of the Congo, Equatorial Guinea, Gabon, Ghana, Guinea-Bissau, Mali, Mauritania, Niger, Nigeria, Senegal, and Togo.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Number of Total Articles per Month}
+\includegraphics[width=0.7\textwidth]{Figures/aggregate_normalization_reference_counts.pdf}
+\label{fig:z_plot_all_cnt}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} The figure shows the total number of monthly articles (excluding non-articles) for all countries included in the study. The black line shows monthly counts; the red line shows the twelve-month rolling mean.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Comparison of Index A and Index B: Politically Motivated Violence}
+\includegraphics[width=\textwidth]{Figures/nbs_ab_political_violence_by_country.pdf}
+\label{fig:country_count_norm_AB_political_violence}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure compares the news-based political instability sentiment indicators (Index A and Index B) for the dimension of politically motivated violence across all sample countries.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Comparison of Index A and Index B: Mass Civil Protest}
+\includegraphics[width=\textwidth]{Figures/nbs_ab_mass_civil_protest_by_country.pdf}
+\label{fig:country_count_norm_AB_mass_civil_protest}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure compares the news-based political instability sentiment indicators (Index A and Index B) for the dimension of mass civil protest across all sample countries.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Comparison of Index A and Index B: Instability of Regime}
+\includegraphics[width=\textwidth]{Figures/nbs_ab_instability_of_regime_by_country.pdf}
+\label{fig:country_count_norm_AB_instability_of_regime}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure compares the news-based political instability sentiment indicators (Index A and Index B) for the dimension of instability of the regime across all sample countries.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Comparison of Index A and Index B: Instability Within Regime}
+\includegraphics[width=\textwidth]{Figures/nbs_ab_instability_within_regime_by_country.pdf}
+\label{fig:country_count_norm_AB_instability_within_regime}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure compares the news-based political instability sentiment indicators (Index A and Index B) for the dimension of instability within the regime across all sample countries.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Annual Cross-Country Correlation by Political Instability Dimension}
+\includegraphics[width=\textwidth]{Figures/annual_correlation_heatmaps.pdf}
+\label{fig:correlation_heatmaps_annual}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure shows annual cross-country correlation coefficients for each political instability dimension. Blue indicates negative correlations; red indicates positive correlations. Country codes: BFA = Burkina Faso, CMR = Cameroon, CAF = Central African Republic, TCD = Chad, CIV = Côte d'Ivoire, COD = Democratic Republic of the Congo, GNQ = Equatorial Guinea, GAB = Gabon, GHA = Ghana, GNB = Guinea-Bissau, MLI = Mali, MRT = Mauritania, NER = Niger, NGA = Nigeria, SEN = Senegal.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Monthly Cross-Country Correlation by Political Instability Dimension}
+\includegraphics[width=\textwidth]{Figures/monthly_correlation_heatmaps.pdf}
+\label{fig:correlation_heatmaps_monthly}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure shows monthly cross-country correlation coefficients for each political instability dimension. Blue indicates negative correlations; red indicates positive correlations. Country codes as in Figure~\ref{fig:correlation_heatmaps_annual}.}}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\caption{Geographical Contagion Network: Instability of Regime}
+\includegraphics[width=\textwidth, trim=0cm 0cm 0cm 1.5cm, clip]{Figures/contagion_network_geo_instability_of_regime.pdf}
+\label{fig:contagion_network_geo_instability_of_regime}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure displays the geographical contagion network for the regime instability dimension. Edge weights represent cross-correlation strength at optimal lag (up to 12 months). Country codes as in Figure~\ref{fig:correlation_heatmaps_annual}.}}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\caption{Geographical Contagion Network: Instability Within Regime}
+\includegraphics[width=\textwidth, trim=0cm 0cm 0cm 1.5cm, clip]{Figures/contagion_network_geo_instability_within_regime.pdf}
+\label{fig:contagion_network_geo_instability_within_regime}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure displays the geographical contagion network for the within-regime instability dimension. Edge weights represent cross-correlation strength at optimal lag (up to 12 months). Country codes as in Figure~\ref{fig:correlation_heatmaps_annual}.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Geographical Contagion Network: Mass Civil Protest}
+\includegraphics[width=\textwidth, trim=0cm 0cm 0cm 1.5cm, clip]{Figures/contagion_network_geo_mass_civil_protest.pdf}
+\label{fig:contagion_network_geo_mass_civil_protest}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure displays the geographical contagion network for the mass civil protest dimension. Edge weights represent cross-correlation strength at optimal lag (up to 12 months). Country codes as in Figure~\ref{fig:correlation_heatmaps_annual}.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Geographical Contagion Network: Political Violence}
+\includegraphics[width=\textwidth, trim=0cm 0cm 0cm 1.5cm, clip]{Figures/contagion_network_geo_political_violence.pdf}
+\label{fig:contagion_network_geo_political_violence}
+\begin{minipage}{\textwidth}
+    {\footnotesize{\textit{Notes:} This figure displays the geographical contagion network for the political violence dimension. Edge weights represent cross-correlation strength at optimal lag (up to 12 months). Country codes as in Figure~\ref{fig:correlation_heatmaps_annual}.}}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\caption{Impulse Responses to Political Instability in the Democratic Republic of the Congo}
+\includegraphics[width=\textwidth, trim=0 0 0 1cm, clip]{Figures/IRF_Democratic_Republic_of_the_Congo_GPRBASELINE_endo_com.png}
+\label{fig:IRF_Democratic_Republic_of_the_Congo_GPRBASELINE_endo_com}
+\begin{minipage}{\textwidth}
+ % Adds a bit of vertical space between the figure and the notes
+    {\footnotesize{\textit{Notes:} This figure shows the Impulse Responses to a one standard deviation shock to the four political instability indicators for the Democratic Republic of the Congo for the change of the exchange rate, consumer price inflation, interest rates, and economic activity in monthly frequency using the commodity prices as endogeneous variables in the system.}}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\caption{Impulse Responses to Political Instability in the Democratic Republic of the Congo}
+\includegraphics[width=\textwidth, trim=0 0 0 1cm, clip]{Figures/IRF_Democratic_Republic_of_the_Congo_GPRBASELINE_no_com.png}
+\label{fig:IRF_Democratic_Republic_of_the_Congo_GPRBASELINE_no_com}
+\begin{minipage}{\textwidth}
+ % Adds a bit of vertical space between the figure and the notes
+    {\footnotesize{\textit{Notes:} This figure shows the Impulse Responses to a one standard deviation shock to the four political instability indicators for the Democratic Republic of the Congo for the change of the exchange rate, consumer price inflation, interest rates, and economic activity in monthly frequency using no commodity prices.}}
+\end{minipage}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% force all pending floats to appear before moving on
+\FloatBarrier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Additional Tables} \label{app:tables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[h]
+   \caption{Summary Statistics: Monthly Article Counts}
+   \label{tab:summary_statistics}
+   \centering
+      \scriptsize
+  \resizebox{0.7\linewidth}{!}{%
+\begin{tabular}{lrrrr}
+  \hline  \addlinespace[0.3em]
+ \hline
+Country & Mean & Median & p10 & p90 \\ 
+  \addlinespace[0.3em]
+ \hline
+Nigeria & 445 & 448 & 123 & 706 \\ 
+  Democratic Republic of the Congo & 193 & 162 & 43 & 366 \\ 
+  Côte d'Ivoire & 132 & 86 & 32 & 219 \\ 
+  Ghana & 92 & 79 & 27 & 151 \\ 
+  Mali & 83 & 44 & 9 & 190 \\ 
+  Senegal & 73 & 58 & 15 & 139 \\ 
+  Cameroon & 58 & 47 & 16 & 107 \\ 
+  Niger & 45 & 31 & 11 & 82 \\ 
+  Burkina Faso & 40 & 23 & 5 & 85 \\ 
+  Chad & 40 & 28 & 7 & 82 \\ 
+  Central African Republic & 33 & 19 & 4 & 69 \\ 
+  Togo & 27 & 15 & 5 & 49 \\ 
+  Gabon & 25 & 17 & 7 & 41 \\ 
+  Mauritania & 24 & 16 & 5 & 50 \\ 
+  Guinea-Bissau & 22 & 10 & 2 & 63 \\ 
+  Benin & 15 & 11 & 4 & 30 \\ 
+  Equatorial Guinea & 15 & 8 & 1 & 32 \\ 
+     \hline
+  mean & 80 & 65 & 19 & 145 \\ 
+median & 40 & 28 & 7 & 82 \\ 
+  min & 15 & 8 & 1 & 30 \\ 
+  max & 445 & 448 & 123 & 706 \\ 
+   \hline
+ \hline
+\end{tabular}
+  }%
+     \vspace{0.5em} % Optional spacing between table and notes
+ \begin{minipage}{0.7\linewidth}
+ {\footnotesize \textit{Notes:} This table presents the summary statistics for the counted number of articles. The mean, median, 10th, and 90th percentiles of the number of articles are shown for each country, the mean, median, minimum, and maximum over all countries.}
+ \end{minipage}
+ \end{table}
+
+\begin{table}[htbp]
+\scriptsize
+\centering
+\caption{Mean Correlations across Countries}
+\label{tab:mean_correlation_selected_events_ordered}
+\begin{minipage}{0.7\linewidth}
+\begin{tabular}{llrrrr}
+\toprule
+& & \multicolumn{4}{c}{NBS Dimensions} \\
+\cmidrule(lr){3-6}
+Event Type & Source & Violence & Protest & Within & Regime \\
+\midrule
+Political Violence &  & 1.00 & --- & --- & --- \\ 
+  Mass Civil Protest &  & 0.57 & 1.00 & --- & --- \\ 
+  Instability within Regime &  & 0.63 & 0.56 & 1.00 & --- \\ 
+  Instability of Regime &  & 0.42 & 0.39 & 0.58 & 1.00 \\ 
+  \midrule
+  Civil Unrest & BARRET & 0.37 & 0.43 & 0.52 & 0.35 \\ 
+  Internal Conflict & IRCG & 0.19 & 0.14 & 0.14 & 0.12 \\ 
+  Coups & COUPS & 0.14 & 0.13 & 0.14 & 0.14 \\ 
+  Annual Coups & CSP & 0.07 & 0.03 & 0.03 & 0.03 \\ 
+  Civil War & IRCG & 0.05 & -0.06 & -0.05 & -0.08 \\ 
+  Viol. & WHIV & 0.31 & 0.29 & 0.24 & 0.19 \\ 
+  Viol. against Civilians & ACLED & 0.17 & 0.03 & 0.09 & 0.05 \\ 
+  Ethnic Viol. & UCDP & 0.04 & -0.00 & 0.02 & 0.00 \\ 
+  Battles & ACLED & 0.28 & 0.12 & 0.12 & 0.08 \\ 
+  Explosions & ACLED & 0.14 & 0.03 & 0.04 & 0.01 \\ 
+  Terrorism & IRCG & 0.05 & -0.06 & -0.05 & -0.08 \\ 
+  Protest & WHIV & 0.11 & 0.24 & 0.16 & 0.13 \\ 
+  Protests & ACLED & 0.16 & 0.16 & 0.13 & 0.16 \\ 
+  Riots & ACLED & 0.12 & 0.11 & 0.08 & 0.07 \\ 
+  Pol. Sanctions & WHIV & 0.10 & 0.19 & 0.15 & 0.10 \\ 
+  Corruption Index & GALLUP & -0.03 & 0.05 & -0.04 & -0.02 \\ 
+  Gov. Crises & CNTS & 0.02 & -0.01 & -0.00 & 0.03 \\ 
+  Years in Office & DPI & 0.01 & 0.03 & -0.02 & -0.09 \\ 
+  Legis. Frac. & DPI & -0.11 & -0.18 & -0.17 & -0.13 \\ 
+  Democracy Index & CSP & -0.16 & -0.13 & -0.08 & 0.00 \\ 
+  Gov. Effect. & WWGI & -0.06 & -0.06 & -0.07 & -0.09 \\ 
+  Party in Power & DPI & -0.00 & 0.01 & -0.09 & -0.15 \\ 
+  Maj. Party & DPI & -0.01 & 0.03 & -0.04 & -0.19 \\ 
+  Pol. Stab. No Viol. & WWGI & -0.15 & 0.01 & 0.03 & -0.02 \\ 
+  Reg. Quality & WWGI & -0.08 & 0.00 & -0.08 & -0.06 \\ 
+  Rule of Law & WWGI & -0.00 & -0.03 & -0.03 & -0.08 \\ 
+  Voice and Account. & WWGI & -0.05 & -0.06 & -0.03 & -0.08 \\ 
+\bottomrule
+\end{tabular}
+\vspace{0.5em}
+{\footnotesize \flushleft \textit{Notes:} This table reports mean pairwise correlations across countries between the four NBS dimensions Index B (Political Violence, Mass Civil Protest, Instability within Regime, and Instability of Regime) and a set of alternative political (in-)stability measures. Event Type denotes the name of the indicator, and Sources denotes the underlying dataset. The NBS Dimensions were aggregated to the same frequency as the alternative measure, and the time span was adjusted to the maximum common length available. Not all alternative measures exist for all countries.}
+\end{minipage}
+\end{table}
+
+
+\begin{landscape}
+\begin{table}[!t]
+   \caption{Summary Statistics for All Dimensions: Monthly Article Counts}
+   \label{tab:summary_statistics_all}
+   \centering
+   \resizebox{1.5\textwidth}{!}{%
+ \begin{tabular}{lrrrrrrrrrrrrrrrrrrrrrrrr}
+ \hline
+ \multicolumn{1}{c}{} &  \multicolumn{4}{c}{All Articles} & \multicolumn{4}{c}{Political Instability} &  \multicolumn{4}{c}{Political Violence} &  \multicolumn{4}{c}{Mass Civil Protest} &  \multicolumn{4}{c}{Instability Within Regime} &  \multicolumn{4}{c}{Instability Of Regime} \\
+ \hline
+ Country & Mean & Median & p10 & p90& Mean & Median & p10 & p90 & Mean & Median & p10 & p90 & Mean & Median & p10 & p90 & Mean & Median & p10 & p90 & Mean & Median & p10 & p90 \\
+ \hline
+  \addlinespace[0.3em]
+ \hline
+Benin & 15 & 11 & 4 & 30 & 7 & 3 & 0 & 16 & 3 & 1 & 0 & 9 & 1 & 0 & 0 & 1 & 3 & 1 & 0 & 6 & 0 & 0 & 0 & 1 \\ 
+  Burkina Faso & 40 & 23 & 5 & 85 & 34 & 10 & 0 & 83 & 26 & 6 & 0 & 74 & 3 & 0 & 0 & 6 & 6 & 2 & 0 & 12 & 2 & 0 & 0 & 4 \\ 
+  Cameroon & 58 & 47 & 16 & 107 & 27 & 10 & 1 & 71 & 21 & 7 & 0 & 60 & 2 & 0 & 0 & 6 & 4 & 2 & 0 & 10 & 0 & 0 & 0 & 1 \\ 
+  Central African Republic & 33 & 19 & 4 & 69 & 43 & 15 & 1 & 103 & 32 & 10 & 0 & 87 & 1 & 0 & 0 & 4 & 8 & 3 & 0 & 18 & 2 & 0 & 0 & 5 \\ 
+  Chad & 40 & 28 & 7 & 82 & 32 & 17 & 3 & 71 & 24 & 13 & 2 & 55 & 2 & 0 & 0 & 4 & 6 & 3 & 0 & 13 & 1 & 0 & 0 & 3 \\ 
+  Côte d'Ivoire & 132 & 86 & 32 & 219 & 109 & 28 & 7 & 200 & 75 & 17 & 4 & 135 & 10 & 1 & 0 & 16 & 25 & 8 & 1 & 48 & 5 & 1 & 0 & 14 \\ 
+  Democratic Republic of the Congo & 193 & 162 & 43 & 366 & 152 & 108 & 23 & 339 & 115 & 83 & 16 & 259 & 7 & 3 & 0 & 17 & 28 & 13 & 3 & 67 & 6 & 2 & 0 & 12 \\ 
+  Equatorial Guinea & 15 & 8 & 1 & 32 & 4 & 1 & 0 & 12 & 2 & 0 & 0 & 6 & 0 & 0 & 0 & 1 & 2 & 0 & 0 & 4 & 0 & 0 & 0 & 1 \\ 
+  Gabon & 25 & 17 & 7 & 41 & 12 & 4 & 0 & 20 & 6 & 2 & 0 & 10 & 1 & 0 & 0 & 2 & 5 & 1 & 0 & 8 & 1 & 0 & 0 & 2 \\ 
+  Ghana & 92 & 79 & 27 & 151 & 17 & 9 & 1 & 34 & 9 & 5 & 0 & 21 & 1 & 0 & 0 & 2 & 6 & 3 & 0 & 13 & 1 & 0 & 0 & 3 \\ 
+  Guinea-Bissau & 22 & 10 & 2 & 63 & 20 & 5 & 0 & 44 & 13 & 3 & 0 & 29 & 1 & 0 & 0 & 3 & 6 & 2 & 0 & 13 & 1 & 0 & 0 & 3 \\ 
+  Mali & 83 & 44 & 9 & 190 & 78 & 21 & 2 & 210 & 61 & 15 & 1 & 166 & 4 & 1 & 0 & 10 & 12 & 3 & 0 & 31 & 3 & 0 & 0 & 7 \\ 
+  Mauritania & 24 & 16 & 5 & 50 & 15 & 6 & 0 & 37 & 9 & 3 & 0 & 25 & 1 & 0 & 0 & 3 & 4 & 1 & 0 & 9 & 1 & 0 & 0 & 2 \\ 
+  Niger & 45 & 31 & 11 & 82 & 35 & 18 & 3 & 72 & 25 & 13 & 2 & 56 & 2 & 1 & 0 & 5 & 7 & 2 & 0 & 15 & 2 & 0 & 0 & 4 \\ 
+  Nigeria & 445 & 448 & 123 & 706 & 240 & 192 & 47 & 456 & 177 & 138 & 28 & 376 & 18 & 10 & 1 & 44 & 47 & 30 & 10 & 91 & 7 & 5 & 1 & 15 \\ 
+  Senegal & 73 & 58 & 15 & 139 & 29 & 17 & 4 & 57 & 17 & 10 & 2 & 34 & 3 & 1 & 0 & 5 & 9 & 4 & 0 & 18 & 1 & 0 & 0 & 4 \\ 
+  Togo & 27 & 15 & 5 & 49 & 19 & 5 & 0 & 49 & 10 & 2 & 0 & 24 & 2 & 0 & 0 & 6 & 6 & 1 & 0 & 14 & 1 & 0 & 0 & 3 \\ 
+  mean & 80 & 65 & 19 & 145 & 51 & 28 & 5 & 110 & 37 & 19 & 3 & 84 & 3 & 1 & 0 & 8 & 11 & 5 & 1 & 23 & 2 & 0 & 0 & 5 \\ 
+   \hline
+ \hline
+median & 40 & 28 & 7 & 82 & 29 & 10 & 1 & 71 & 21 & 7 & 0 & 55 & 2 & 0 & 0 & 5 & 6 & 2 & 0 & 13 & 1 & 0 & 0 & 3 \\ 
+  min & 15 & 8 & 1 & 30 & 4 & 1 & 0 & 12 & 2 & 0 & 0 & 6 & 0 & 0 & 0 & 1 & 2 & 0 & 0 & 4 & 0 & 0 & 0 & 1 \\ 
+  max & 445 & 448 & 123 & 706 & 240 & 192 & 47 & 456 & 177 & 138 & 28 & 376 & 18 & 10 & 1 & 44 & 47 & 30 & 10 & 91 & 7 & 5 & 1 & 15 \\ 
+   \hline
+ \hline
+\end{tabular}
+  }%
+     \vspace{0.5em}
+ \begin{minipage}{0.7\linewidth}
+ {\footnotesize \textit{Notes:} This table presents summary statistics for the monthly count of articles related to political instability, disaggregated by dimension.}
+ \end{minipage}
+ \end{table}
+\end{landscape}
+
+
+
+
+\begin{table}[h!]
+\caption{Search Criteria}
+\label{tab:search_terms}
+\centering
+\scriptsize
+\begin{tabular}{|p{0.1\linewidth}|p{0.8\linewidth}|}
+\hline
+\textbf{Type} & \textbf{Content} \\ \hline
+\textbf{Exclude Tags} & Abstracts, Advertorials/Sponsored Content, AI-Generated Content, Audio-visual Links, Calendar and Events, Chronology, Columns, Commentaries/Opinions, Corporate Digest, Country Profiles, Economic Predictions/Forecasts, Editorials, Headline Listings, Headline-Only Content, Images, Interviews, Letters, News Digest, Obituaries, People Profiles, Personal Announcements, Press Releases, Prospectuses, Rankings, Reviews, Routine General News, Routine Market, Statistics, Surveys/Polls, Tables, Transcripts, Commodity/Financial Market News, Weather, Sports, Books, Games, Movies, Theater, International Relations, Space, Royal Families, Sciences/Humanities, Real Estate/Property, Animal Attacks, Arts/Entertainment, Awards, Fire/Rescue Services, Health, Global World Issues, Economic Performance/Indicators, Trade/External Payments, Eurozone Data/Policies, Economic News, Corporate News \\ \hline
+\textbf{Include Tags} & Violence based search: \begin{itemize}
+    \item Domestic Politics, Public Security, Civil Unrest, Armed Forces, Terrorism
+     \end{itemize}
+     Politics based search:
+      \begin{itemize}
+    \item Domestic Politics, Public Security, Elections, impeachment, Political Appointments/Terminations
+\end{itemize}
+\\ \hline
+\textbf{Exclude Strings} & \cite{caldara2022}: \begin{itemize}
+ \item movie*, film*, museum*, anniversar*, obituar*, memorial*, arts, book, books, memoir*, ``price war'', game, story, history, veteran*, tribute*, sport, music, racing, cancer, ``real estate'', mafia, trial, tax
+ \end{itemize}
+ \cite{BARRETT2022}: \begin{itemize}
+ \item ``vote of protest'', ``protest vote'', protestant*, do not use ``demonstration'' 
+\end{itemize} \\ \hline
+\textbf{Include Strings} & 
+
+Politically motivated Violence: 
+   
+Guerilla Warfare \newline
+   ((guerrilla OR guerilla OR militant OR rebel* OR ``armed resistance'' OR militia OR paramilitary OR Islamist* OR terrorist* OR jihadist OR separatist OR ``Amabazonia Defence Forces'' OR ADF OR ``Boko Haram'' OR CPDM OR Seleka OR ``Anti-balaka'' OR UPC OR FPRC OR JNIM OR ``Islamic State'' OR ISGS OR ``Forces Nouvelles'' OR GMDF OR MNLA OR MFDC OR AQIM OR ``Islamic Salvation Front'' OR FIS) 
+   AND (sabotage OR insurgen* OR ambush OR overthrow OR coup OR rebellion OR ``regime change'' OR ``irregular warfare'' OR ``unconventional warfare'' OR battle OR combat OR terror OR attack* OR kill* OR murder* OR shot* OR raid OR die* OR ``under fire'' OR losses)) \newline 
+
+Revolutions \newline
+   (revolution* OR ``armed uprising'' OR rebellion OR ``armed insurrection'' OR mutiny* OR revolt OR overthrow OR ``independence movement'' OR secession OR ``freedom fight'' OR ``power shift'' OR ``political upheaval'' OR ``coup plot'') NEAR10 (anti-government OR government OR ``democratic movement'' OR liberation OR opposition OR dissident OR transformation OR ``political change'' OR ``regime change'' OR (end w/3 military) OR (end w/3 dictator*) OR (end w/3 authoritarian*))/F50/ \newline
+
+Civil War \newline
+   (``civil war'' OR ``internal conflict'' OR ``civil strife'' OR ``domestic conflict'' OR ``armed rebellion'' OR ``internal warfare'' OR ``national crisis'' OR ``armed conflict'' OR ``government crackdown'' OR ``conflict escalation'')/F50/ AND (``mass casualties'' OR ``military engagement'' OR separatist OR government OR kill* OR die* OR purge* OR death OR murder* OR violen*)/F50/ \newline
+
+      \\ \hline
+   \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+   \caption*{Search Criteria (continued)}
+   \centering
+   \scriptsize
+   \begin{tabular}{|p{0.1\linewidth}|p{0.8\linewidth}|}
+   \hline
+   \textbf{Type} & \textbf{Content} \\ \hline
+   \textbf{Include Strings} & 
+Internal Conflicts \newline
+   (conflict OR violen* OR war OR rebellion OR crisis OR assault OR murder* OR kill* OR terror* OR attack* OR ambush OR insurgen*) 
+   AND (politic* OR government OR ``government official'' OR ``public official'' OR ``political leader'' OR representative OR congressman OR ``cabinet member'' OR minister OR governor OR senator OR lawmaker OR mayor OR ``member of parliament'' OR president) \newline 
+
+
+Ethnic Tensions \newline
+   (``Ethnic tensions'' OR ``ethnic violence'' OR ``Racial tensions'' OR ``Ethnic conflict'' OR ``Racial conflict'' OR ``Nationality divisions'' OR ``Interethnic violence'' OR ``Racial unrest'' OR ``Ethnic unrest'' OR ``Cultural tensions'' OR ``Identity conflict'' OR ``Ethnic strife'' OR ``Racial strife'' OR ``Communal violence'' OR ``Sectarian tensions'' OR ``Ethnic discrimination'' OR ``Racial discrimination'' OR ``National identity crisis'' OR ``Ethnic polarization'' OR (ethnic OR racial) w/3 (violence OR conflict))/F50/ \newline 
+
+Riots \newline
+   (riot OR ``civil unrest'' OR ``public disturbance'' OR ``violent protest'' OR ``street violence'' OR ``mob violence'' OR uprising OR ``urban unrest'' OR ``crowd violence'' OR ``mass riot'' OR ``social unrest'' OR ``civil disorder'' OR ``riotous behavior'' OR ``civil disturbance'' OR ``violent clash'' OR ``public disorder'' OR ``riot outbreak'' OR ``mass disturbance'' OR ``public riot'')/F50/ \newline 
+
+Demonstrations \newline
+   (``Protest'' OR ``Demonstration'' OR ``Sit-in'' OR ``Peaceful protest'' OR ``Public gathering'' OR ``Protest march'' OR ``Protest rally'' OR ``Peaceful demonstration'' OR ``Mass protest'' OR ``Public demonstration'' OR ``Activist gathering'' OR ``Protest event'' OR ``Political protest'' OR ``Anti-government protest'' OR ``Civic protest'' OR ``Social movement'' OR ``Public dissent'' OR ``Protest action'') \newline 
+
+Strikes \newline
+   (``Work stoppage'' OR ``Labor strike'' OR ``Industrial action'' OR Walkout OR ``General strike'' OR ``Employee strike'' OR ``Workers' strike'' OR ``Job action'' OR ``Strike action'' OR ``Work protest'' OR ``Union strike'' OR ``Labor protest'' OR ``Trade union strike'' OR ``Collective action'' OR ``Sit-down strike'' OR ``Strike movement'' OR ``Workplace strike'' OR ``Strike rally'' OR ``Workforce protest'' OR ``union protest'' OR ``wage protest'' OR ``employment protest'') \newline 
+
+Instability within the political regime \newline
+   (democracy OR elect* OR vote* OR multiparty OR ``political alliance'' OR suffrage OR ``political parties'' OR ``government stability'' OR turnout OR multiparty OR ``political competition'' OR political w/3 fragmentation OR ballot OR ``coalition government'' OR ``electoral alliances'' OR ``electoral diversity'' OR contender* OR ``political alliance*'' OR ``political diversity'' OR ``political pluralism'' OR democratic w/3 (election OR vote OR right OR reform OR institution))/F50/ \newline
+
+ Instability of the political regime \newline
+    ``new constitution'' OR ``cabinet change'' OR coups d'etat OR ``constitutional change'' OR anarchy OR ``constitutional reform'' OR ``regime change'' OR ``electoral reforms'' OR ``election disputes'' OR ``constitutional referendum''  OR (new OR change or transition OR amend* OR reform OR overhaul OR restructure) w/3 (political OR constitutional OR leader* OR electoral OR systemic OR policy OR state OR government) \\
+ \hline
+\end{tabular}
+   \vspace{0.5em}
+   \begin{minipage}{\textwidth}
+   {\footnotesize \flushleft \textit{Notes:} This table summarizes the search terms used to construct the news-based political instability indices. Search operators include ``and'', ``or'', ``not'', ``near'', ``atleast'', ``within'', truncation sign ``*'', first x words, word count, and question mark.}
+   \end{minipage}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPROVED POLITICAL EVENTS TABLE WITH PRIMARY DIMENSION COLUMN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\renewcommand{\arraystretch}{0.85}
+\setlength{\tabcolsep}{3pt}
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{Major Political Instability Events and NBS Index Response, 1990--2025}
+\begin{tabular}{p{2.5cm} p{1.5cm} p{7.5cm} L{3cm}}
+\toprule
+\textbf{Country} & \textbf{Date} & \textbf{Key Event} & \textbf{Primary NBS Dimension} \\
+\midrule
+Benin & 1990--1991 & Transition to multiparty democracy; National Conference & Within-Regime \\
+      & 2019 & Protests over exclusionary parliamentary elections & Protest \\
+\midrule
+Burkina Faso & 2014--10 & Popular uprising ousts President Compaoré & Protest, Regime \\
+              & 2015--09 & Failed coup attempt against interim government & Violence, Regime \\
+              & 2022--01 & Military coup removes President Kaboré & Regime \\
+              & 2022--09 & Second coup; Captain Traoré assumes power & Regime \\
+\midrule
+Cameroon & 2016--10 & Anglophone protests escalate into armed conflict & Violence, Protest \\
+         & 2018--10 & Contested presidential election amid separatist violence & Violence, Within \\
+\midrule
+Central African & 2003--03 & Bozizé coup ousts President Patassé & Violence, Regime \\
+Republic & 2013--03 & Séléka rebellion captures Bangui; civil war begins & Violence, Regime \\
+         & 2019--02 & Khartoum peace accord signed & Violence \\
+\midrule
+Chad & 2006--04 & Rebel assault on N'Djamena repelled & Violence \\
+     & 2021--04 & President Déby killed; military council seizes power & Violence, Regime \\
+\midrule
+Côte d'Ivoire & 2002--09 & Civil war divides country north and south & Violence \\
+               & 2010--2011 & Post-election crisis; Gbagbo refuses to concede & Violence, Regime \\
+\midrule
+Dem. Rep. & 1996--1997 & First Congo War; Mobutu overthrown & Violence, Regime \\
+of the Congo & 1998--2003 & Second Congo War & Violence \\
+             & 2018--12 & Contested election; Tshisekedi inaugurated & Within-Regime \\
+\midrule
+Eq. Guinea & 2004--03 & Failed coup attempt against Obiang & Regime \\
+           & 2017--12 & Alleged mercenary plot; opposition crackdown & Violence, Within \\
+\midrule
+Gabon & 1993--12 & Disputed elections trigger riots & Protest, Within \\
+      & 2016--08 & Post-election protests; parliament set ablaze & Protest, Violence \\
+      & 2023--08 & Military coup removes President Ali Bongo & Regime \\
+\midrule
+Ghana & 2000--12 & Peaceful transfer from Rawlings to Kufuor & Within-Regime \\
+      & 2008--12 & Peaceful alternation; opposition victory & Within-Regime \\
+\midrule
+Guinea-Bissau & 1998--1999 & Civil war; President Vieira ousted & Violence, Regime \\
+              & 2003--09 & Military coup removes President Ialá & Regime \\
+              & 2012--04 & Coup interrupts elections & Regime \\
+\midrule
+Mali & 1991--03 & Coup ends Traoré dictatorship & Regime \\
+     & 2012--03 & Military coup amid Tuareg rebellion & Violence, Regime \\
+     & 2020--08 & Coup ousts President Keïta & Regime \\
+     & 2021--05 & Second coup; Goïta consolidates rule & Regime \\
+\midrule
+Mauritania & 2005--08 & Coup removes President Taya & Regime \\
+            & 2008--08 & Coup ousts President Abdallahi & Regime \\Political Instability Article Counts by Country
+            & 2019--08 & Peaceful transfer to Ghazouani & Within-Regime \\
+\midrule
+Niger & 1996--01 & Coup by Baré Maïnassara & Regime \\
+       & 1999--04 & Maïnassara assassinated & Violence, Regime \\
+       & 2010--02 & Coup removes President Tandja & Regime \\
+       & 2023--07 & Military coup detains President Bazoum & Regime \\
+\midrule
+Nigeria & 1993--06 & Annulled elections trigger mass protests & Protest, Within \\
+        & 2009--07 & Boko Haram uprising in Maiduguri & Violence \\
+        & 2012--01 & Occupy Nigeria fuel subsidy protests & Protest \\
+        & 2020--10 & \#EndSARS protests; Lekki shootings & Protest, Violence \\
+        & 2024--07 & \#EndBadGovernance protests & Protest \\
+\midrule
+Senegal & 2011--06 & Y'en a Marre protests against Wade & Protest \\
+         & 2021--2024 & Protests over Sall's third-term bid & Protest \\
+         & 2025--02 & Casamance peace deal signed & Violence \\
+\midrule
+Togo & 1993--01 & Violent crackdown on pro-democracy protests & Violence, Protest \\
+     & 2005--02 & Eyadéma dies; son installed; post-election violence & Violence, Regime \\
+     & 2017--08 & Protests demand term limits & Protest \\
+     & 2024--04 & Constitutional reform to parliamentary system & Within-Regime \\
+\bottomrule
+\end{tabular}
+\label{tab:instability_events_detailed}
+\vspace{0.5em}
+\begin{minipage}{\textwidth}
+{\footnotesize \flushleft \textit{Notes:} This table summarizes major political events in the sample countries and identifies which NBS dimension(s) are most likely related to the event. Dimension abbreviations: Violence = Politically Motivated Violence; Protest = Mass Civil Protest; Regime = Instability of the Regime; Within = Instability Within the Regime.}
+\end{minipage}
+\end{table}
+
+
+% % LaTeX Table
+% % Table for Political Violence
+% % latex table generated in R 4.5.2 by xtable 1.8-4 package
+% % Thu Dec 18 16:08:10 2025
+% \begin{sidewaystable}[htbp]
+% \scriptsize
+% \centering
+% \centering
+% \caption{Correlation Matrix for Political Violence} 
+% \label{tab:corr_Political Violence}
+% \begin{tabular}{ll*{18}{r}}
+%   \toprule
+% Event Type & Source & BEN & BFA & CMR & CAF & TCD & CIV & COD & GNQ & GAB & GHA & GNB & MLI & MRT & NER & Nigeria & SEN & TGO & MEAN \\ 
+%   \midrule
+% Annual Coups & CSP & 0.01 & -0.01 & 0.01 & 0.23 & 0.14 & 0.02 & 0.04 & -0.02 & 0.24 & -0.00 & 0.03 & 0.02 & -0.00 & 0.12 & -0.07 &  & 0.01 & 0.05 \\ 
+%   Anti-Gov. Demonst. & CNTS & -0.00 & 0.11 & 0.08 & 0.27 & -0.02 & 0.13 &  &  & 0.10 & 0.01 & -0.04 & 0.06 & -0.01 & -0.04 & 0.06 & 0.05 & 0.01 & 0.05 \\ 
+%   Autocracy Index & CSP & -0.37 & -0.21 & 0.13 & -0.74 & -0.01 &  & -0.41 & 0.19 & -0.30 & 0.51 & 0.05 & -0.04 & 0.02 & -0.16 & 0.12 & 0.13 & -0.17 & -0.08 \\ 
+%   Battles & ACLED & 0.25 & 0.48 & 0.25 & 0.61 & 0.52 & 0.73 & -0.03 & 0.26 & 0.41 & 0.16 & 0.54 & 0.42 & 0.36 & 0.32 & 0.04 & 0.19 & 0.15 & 0.33 \\ 
+%   Civil Disorder & IRCG &  & 0.27 & 0.14 &  &  & 0.16 & -0.15 &  & -0.03 & -0.22 & -0.06 & 0.35 &  & 0.15 & 0.20 & -0.22 & -0.21 & 0.03 \\ 
+%   Civil Unrest & BARRET &  & 0.71 &  &  & 0.24 &  & 0.48 &  &  & 0.15 &  & 0.58 & 0.24 & 0.33 & 0.60 & 0.40 & 0.32 & 0.40 \\ 
+%   Civil War & IRCG &  & 0.29 & 0.20 &  &  & 0.22 & -0.11 &  & -0.04 & -0.22 & -0.06 & 0.41 &  & 0.11 & 0.33 & -0.23 & -0.26 & 0.05 \\ 
+%   Control of Corrupt. & WWGI & 0.24 & 0.06 & 0.09 & -0.12 & 0.15 & -0.29 & -0.12 & -0.04 & 0.18 & 0.23 & 0.45 & -0.26 & -0.20 & 0.18 & 0.02 & 0.07 & -0.19 & 0.03 \\ 
+%   Corruption Index & GALLUP & -0.37 & -0.44 & -0.50 & -0.08 & 0.30 & -0.11 & 0.15 &  & 0.10 & 0.11 &  & -0.04 & 0.44 & -0.18 & 0.32 & -0.13 & -0.04 & -0.03 \\ 
+%   Coups & COUPS & -0.01 & 0.30 & -0.00 & 0.07 & 0.21 & 0.23 & -0.05 &  & 0.22 &  & 0.25 & 0.26 & 0.06 & 0.10 & -0.02 &  & 0.23 & 0.13 \\ 
+%   Democracy Index & CSP & -0.37 & 0.42 & -0.13 & -0.73 & -0.02 &  & -0.40 &  & -0.26 & -0.49 & 0.09 & -0.04 & -0.12 & -0.15 & 0.24 & -0.15 & -0.00 & -0.14 \\ 
+%   Election Index & GALLUP & 0.35 & 0.57 & 0.49 & 0.72 & -0.18 & -0.18 & -0.07 &  & -0.04 & -0.03 &  & 0.32 & -0.26 & 0.24 & 0.36 & 0.47 & 0.04 & 0.19 \\ 
+%   Ethnic Viol. & UCDP &  &  & -0.01 & 0.27 & 0.04 & 0.03 & -0.02 &  &  &  &  & -0.02 &  & -0.02 & 0.03 & 0.06 & 0.01 & 0.04 \\ 
+%   Explosions & ACLED & -0.12 & 0.34 & 0.31 & 0.39 & 0.19 & 0.34 & 0.03 &  &  &  & 0.28 & 0.28 & 0.05 & 0.02 & 0.16 & 0.19 & 0.49 & 0.21 \\ 
+%   Gov. Crises & CNTS & 0.04 & 0.03 & -0.03 & 0.22 & -0.02 & -0.01 &  &  &  &  & 0.03 & 0.03 &  &  & 0.07 &  & 0.01 & 0.04 \\ 
+%   Gov. Effect. & WWGI & 0.51 & -0.02 & 0.22 & -0.54 & -0.24 & -0.28 & -0.24 & -0.14 & -0.14 & -0.26 & 0.50 & -0.18 & -0.47 & 0.04 & -0.08 & -0.17 & -0.18 & -0.10 \\ 
+%   Gov. Frac. & DPI & -0.70 & 0.12 & 0.18 & 0.22 & -0.16 & 0.30 & -0.31 & -0.17 & -0.08 & 0.43 & 0.49 & 0.34 & 0.02 & -0.24 & 0.21 & -0.03 & -0.27 & 0.02 \\ 
+%   Gov. index & GALLUP & 0.30 & 0.52 & 0.45 & 0.43 & -0.04 & -0.25 & 0.03 &  & 0.02 & -0.02 &  & 0.10 & -0.16 & 0.33 & 0.08 & 0.46 & 0.15 & 0.16 \\ 
+%   Instability of Regime &  & 0.59 & 0.54 & 0.37 & 0.66 & 0.81 & 0.58 & 0.69 & 0.37 & 0.46 & 0.42 & 0.57 & 0.62 & 0.41 & 0.43 & 0.22 & 0.50 & 0.69 & 0.53 \\ 
+%   Instability within Regime &  & 0.73 & 0.65 & 0.69 & 0.74 & 0.79 & 0.78 & 0.62 & 0.52 & 0.81 & 0.51 & 0.74 & 0.79 & 0.64 & 0.63 & 0.42 & 0.73 & 0.89 & 0.69 \\ 
+%   Internal Conflict & IRCG &  & 0.10 & 0.33 &  &  & 0.23 & 0.18 &  & -0.04 & 0.14 & -0.07 & 0.48 &  & 0.29 & 0.22 & 0.21 & 0.52 & 0.22 \\ 
+%   Leadership Index & GALLUP & 0.31 & 0.52 & 0.27 & 0.17 & -0.30 & -0.16 & -0.14 &  & -0.06 & -0.03 &  & 0.22 & 0.16 & 0.30 & 0.25 & 0.43 & 0.40 & 0.16 \\ 
+%   Legis. Frac. & DPI & -0.89 & 0.10 & -0.00 & 0.13 & -0.35 & 0.27 & -0.28 & -0.33 & -0.37 & -0.55 & 0.34 & 0.21 & -0.15 & -0.27 & 0.41 & -0.13 & -0.38 & -0.13 \\ 
+%   Maj. Party & DPI & -0.19 & -0.00 & -0.10 & -0.23 & 0.20 & 0.05 & -0.30 & 0.21 & 0.30 & 0.37 & 0.10 & 0.32 & -0.65 & 0.14 & 0.34 & 0.07 & -0.59 & 0.00 \\ 
+%   Mass Civil Protest &  & 0.52 & 0.60 & 0.58 & 0.41 & 0.65 & 0.79 & 0.59 & 0.53 & 0.72 & 0.37 & 0.71 & 0.60 & 0.54 & 0.47 & 0.59 & 0.67 & 0.79 & 0.60 \\ 
+%   Nr. Seats Largest Party & CNTS & -0.03 & -0.02 & -0.01 & 0.09 & -0.02 & 0.04 &  & 0.08 & 0.08 & 0.13 & -0.03 & -0.02 & 0.05 & -0.00 & 0.12 & 0.09 & -0.01 & 0.03 \\ 
+%   Party in Power & DPI & 0.65 & -0.08 & -0.48 & 0.12 & -0.36 & -0.32 & -0.02 & 0.44 & -0.08 & -0.32 & -0.35 & 0.17 & -0.38 & 0.31 & 0.61 & 0.21 & -0.29 & -0.01 \\ 
+%   Pol. Relaxations & WHIV & -0.03 & -0.01 & 0.05 & 0.05 & 0.23 & 0.02 & 0.14 & -0.03 & 0.32 & 0.07 & -0.01 & 0.04 & 0.19 & 0.04 & -0.17 & 0.08 & 0.13 & 0.07 \\ 
+%   Pol. Sanctions & WHIV & 0.02 & -0.05 & 0.16 & 0.06 & 0.02 & 0.03 & 0.13 & 0.46 & 0.35 & 0.09 & 0.14 & 0.12 & 0.23 & 0.08 & -0.10 & 0.02 & 0.30 & 0.12 \\ 
+%   Pol. Stab. No Viol. & WWGI & -0.23 & -0.52 & -0.57 & -0.59 & 0.20 & -0.28 & 0.31 & 0.10 & -0.07 & 0.05 & 0.23 & -0.46 & -0.56 & -0.07 & -0.41 & 0.12 & 0.21 & -0.15 \\ 
+%   Political Violence &  & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\ 
+%   Protest & WHIV & 0.19 & -0.07 & 0.11 & 0.02 & 0.10 & 0.20 & 0.26 & 0.23 & 0.23 & 0.17 & 0.09 & -0.03 & 0.20 & -0.02 & -0.02 & 0.06 & 0.40 & 0.12 \\ 
+%   Protests & ACLED & 0.16 & 0.46 & 0.41 & 0.31 & 0.08 & 0.09 & -0.12 & 0.10 & 0.17 & 0.13 & 0.00 & 0.46 & -0.15 & 0.42 & 0.24 & 0.29 & 0.13 & 0.19 \\ 
+%   Reg. Quality & WWGI & 0.09 & -0.42 & -0.01 & -0.36 & -0.21 & -0.25 & -0.24 & -0.22 & -0.24 & 0.19 & 0.11 & -0.21 & -0.16 & -0.23 & 0.33 & 0.39 & -0.03 & -0.09 \\ 
+%   Riots & ACLED & 0.16 & 0.25 & 0.10 & 0.50 & 0.03 & 0.05 & -0.06 & -0.01 & 0.30 & 0.00 & -0.02 & 0.23 & 0.00 & 0.08 & 0.15 & 0.24 & 0.08 & 0.12 \\ 
+%   Rule of Law & WWGI & -0.05 & 0.08 & 0.33 & -0.40 & 0.28 & -0.31 & -0.31 & -0.12 & -0.06 & 0.34 & 0.14 & -0.46 & -0.50 & 0.39 & 0.09 & 0.08 & -0.24 & -0.04 \\ 
+%   Strat. Devel. & ACLED & 0.07 & 0.48 & -0.10 & 0.33 & 0.24 & -0.01 & -0.01 & 0.16 & 0.36 & 0.13 & 0.19 & 0.11 & -0.05 & -0.06 & -0.03 & 0.38 & 0.08 & 0.13 \\ 
+%   Terror Attack & CSP &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+%   Terrorism & IRCG &  & 0.33 & 0.31 &  &  & 0.14 & -0.16 &  & -0.03 & -0.22 & -0.07 & 0.41 &  & 0.14 & 0.23 & -0.25 & -0.26 & 0.05 \\ 
+%   Uncert. Index & WUI & -0.03 & 0.31 & 0.23 & 0.07 & 0.04 & 0.05 & -0.09 &  & 0.02 & -0.05 & -0.04 & 0.33 & -0.04 & 0.18 & 0.30 & -0.04 & 0.01 & 0.08 \\ 
+%   Viol. & WHIV & 0.53 & 0.01 & 0.35 & 0.14 & 0.50 & 0.59 & 0.53 & 0.08 & 0.62 & 0.25 & 0.50 & 0.09 & 0.30 & 0.14 & -0.07 & 0.38 & 0.59 & 0.33 \\ 
+%   Viol. against Civilians & ACLED & 0.08 & 0.51 & 0.19 & 0.63 & 0.22 & 0.59 & -0.09 & -0.02 & 0.28 & 0.10 & 0.25 & 0.29 & 0.11 & 0.15 & 0.05 & 0.13 & 0.05 & 0.21 \\ 
+%   Voice and Account. & WWGI & -0.44 & 0.07 & -0.07 & -0.45 & -0.16 & -0.33 & -0.19 & -0.27 & -0.18 & 0.40 & 0.09 & -0.38 & -0.41 & -0.02 & 0.28 & 0.24 & -0.14 & -0.12 \\ 
+%   Years in Office & DPI & 0.46 & 0.12 & -0.48 & 0.08 & -0.36 & -0.16 & -0.14 & 0.44 & 0.09 & 0.21 & -0.33 & 0.72 & -0.25 & -0.31 & -0.13 & 0.16 & -0.19 & -0.00 \\ 
+%    \bottomrule
+% \end{tabular}
+% \end{sidewaystable}
+
+
+
+% % LaTeX Table
+% % Mean correlations across countries
+% % latex table generated in R 4.5.2 by xtable 1.8-4 package
+% % Thu Dec 18 16:18:46 2025
+% \begin{table}[htbp]
+% \scriptsize
+% \centering
+% \centering
+% \caption{Mean Correlations across Countries} 
+% \label{tab:mean_correlation_across_factors}
+% \begin{tabular}{ll*{4}{r}}
+%   \toprule
+% Event Type & Source & Pol. Viol. & Prot. & Within & Regime \\ 
+%   \midrule
+% Annual Coups & CSP & 0.05 & 0.01 & 0.03 & 0.04 \\ 
+%   Anti-Gov. Demonst. & CNTS & 0.05 & 0.01 & 0.02 & 0.04 \\ 
+%   Autocracy Index & CSP & -0.08 & -0.11 & -0.11 & -0.13 \\ 
+%   Battles & ACLED & 0.33 & 0.18 & 0.19 & 0.14 \\ 
+%   Civil Disorder & IRCG & 0.03 & -0.06 & -0.04 & -0.08 \\ 
+%   Civil Unrest & BARRET & 0.40 & 0.48 & 0.56 & 0.37 \\ 
+%   Civil War & IRCG & 0.05 & -0.06 & -0.03 & -0.08 \\ 
+%   Control of Corrupt. & WWGI & 0.03 & -0.06 & 0.00 & -0.03 \\ 
+%   Corruption Index & GALLUP & -0.03 & 0.02 & -0.01 & -0.06 \\ 
+%   Coups & COUPS & 0.13 & 0.13 & 0.15 & 0.15 \\ 
+%   Democracy Index & CSP & -0.14 & -0.14 & -0.08 & -0.01 \\ 
+%   Election Index & GALLUP & 0.19 & 0.12 & 0.17 & 0.20 \\ 
+%   Ethnic Viol. & UCDP & 0.04 & 0.00 & 0.03 & 0.02 \\ 
+%   Explosions & ACLED & 0.21 & 0.08 & 0.09 & 0.07 \\ 
+%   Gov. Crises & CNTS & 0.04 & 0.00 & 0.02 & 0.06 \\ 
+%   Gov. Effect. & WWGI & -0.10 & -0.09 & -0.10 & -0.12 \\ 
+%   Gov. Frac. & DPI & 0.02 & -0.00 & -0.01 & -0.00 \\ 
+%   Gov. index & GALLUP & 0.16 & 0.06 & 0.15 & 0.17 \\ 
+%   Instability of Regime &  & 0.53 & 0.48 & 0.64 & 1.00 \\ 
+%   Instability within Regime &  & 0.69 & 0.60 & 1.00 & 0.64 \\ 
+%   Internal Conflict & IRCG & 0.22 & 0.18 & 0.17 & 0.15 \\ 
+%   Leadership Index & GALLUP & 0.16 & 0.04 & 0.13 & 0.17 \\ 
+%   Legis. Frac. & DPI & -0.13 & -0.20 & -0.17 & -0.15 \\ 
+%   Maj. Party & DPI & 0.00 & 0.06 & -0.02 & -0.18 \\ 
+%   Mass Civil Protest &  & 0.60 & 1.00 & 0.60 & 0.48 \\ 
+%   Nr. Seats Largest Party & CNTS & 0.03 & 0.01 & 0.01 & 0.00 \\ 
+%   Party in Power & DPI & -0.01 & -0.00 & -0.07 & -0.16 \\ 
+%   Pol. Relaxations & WHIV & 0.07 & 0.13 & 0.08 & 0.07 \\ 
+%   Pol. Sanctions & WHIV & 0.12 & 0.22 & 0.15 & 0.13 \\ 
+%   Pol. Stab. No Viol. & WWGI & -0.15 & -0.05 & -0.01 & -0.02 \\ 
+%   Political Violence &  & 1.00 & 0.60 & 0.69 & 0.53 \\ 
+%   Protest & WHIV & 0.12 & 0.27 & 0.18 & 0.16 \\ 
+%   Protests & ACLED & 0.19 & 0.18 & 0.16 & 0.19 \\ 
+%   Reg. Quality & WWGI & -0.09 & -0.05 & -0.08 & -0.08 \\ 
+%   Riots & ACLED & 0.12 & 0.11 & 0.09 & 0.08 \\ 
+%   Rule of Law & WWGI & -0.04 & -0.08 & -0.04 & -0.08 \\ 
+%   Strat. Devel. & ACLED & 0.13 & 0.06 & 0.15 & 0.14 \\ 
+%   Terror Attack & CSP &  &  &  &  \\ 
+%   Terrorism & IRCG & 0.05 & -0.07 & -0.05 & -0.08 \\ 
+%   Uncert. Index & WUI & 0.08 & 0.02 & 0.05 & 0.03 \\ 
+%   Viol. & WHIV & 0.33 & 0.33 & 0.26 & 0.22 \\ 
+%   Viol. against Civilians & ACLED & 0.21 & 0.07 & 0.14 & 0.08 \\ 
+%   Voice and Account. & WWGI & -0.12 & -0.11 & -0.10 & -0.12 \\ 
+%   Years in Office & DPI & -0.00 & 0.03 & -0.03 & -0.12 \\ 
+%    \bottomrule
+% \end{tabular}
+% \end{table}
+
+

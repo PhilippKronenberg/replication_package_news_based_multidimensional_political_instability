@@ -1,0 +1,7 @@
+Data/Raw/restricted/factiva_lookup/Official Companies Taxonomy File.csv
+
+# Local editor and session artifacts
+.Rproj.user/
+.Rhistory
+.RData
+.DS_Store
