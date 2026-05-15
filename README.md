@@ -180,15 +180,6 @@ The benchmark materials bundled in `Data/Raw/public/benchmark_data/` were access
 Macro-data source details recorded in the project bibliography:
 
 - IMF Data Portal: exchange rates, commodity export price indices, CPI, and policy rates. Source URL: `https://data.imf.org`. Bibliography entry: `IMFDataPortal`. Access date recorded in the bibliography: `12 November 2025`.
-- Global Scale Nightlight Time Series Dataset: nighttime lights. Source URL: `https://nightlight.eoatlas.org`. Bibliography entry: `Najjar2024Nightlight`. Access date recorded in the bibliography: `1 October 2025`.
-- World Development Indicators DataBank: included in the bibliography as `WorldBank2025WDI` with source URL `http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators` and access date `1 October 2025`.
+- Global Scale Nightlight Time Series Dataset: nighttime lights. Source URL: `https://nightlight.eoatlas.org`. Access date recorded: `1 October 2025`.
+- World Development Indicators DataBank. Source URL: `http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators` and access date `1 October 2025`.
 
-## Notes
-
-- The packaged figures and tables are stored directly under `Outputs/`.
-- `Data/Raw/public/benchmark_data/` has been trimmed to the exact files read by `Code/3_benchmark_data.R`.
-- `Data/Raw/public/VAR/` has been trimmed to the single DRC monthly CSV used by the MATLAB entrypoint.
-- `Data/Derived/` keeps only the derived objects consumed by the active package scripts.
-- The `Data/Raw/restricted/` folder name is retained for path compatibility with the Factiva-related scripts.
-- Version check on `2026-05-04`: `R 4.5.2`, `Python 3.14.4`, and MATLAB install folder `R2025a` were detected locally.
-- Replication check on `2026-05-04`: `Code/main.R` and `Code/run_all.m` both completed successfully after the package-minimization cleanup. During package preparation, the MATLAB `R2025a` user-preferences folder was reset and backed up so MATLAB could recreate a clean startup state.
