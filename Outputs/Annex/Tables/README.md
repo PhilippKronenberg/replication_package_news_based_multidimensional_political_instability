@@ -14,8 +14,3 @@ Canonical output rule:
 - review PDFs, heatmaps, and other graphics belong in `Outputs/Annex/Figures/`
 
 These files are the canonical generated annex table outputs.
-
-Additional annex-style tables that are not kept here include:
-
-- `Search Criteria`
-- `Major Political Instability Events and NBS Index Response, 1990--2025`
