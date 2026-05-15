@@ -40,7 +40,7 @@ wd <- package_root()
 # Load data ---------------------------------------------------------------
 
 # Load the count data
-load(derived_path("intermediate", "prepared_data_NBS.rda"))
+load(derived_path("prepared_data_NBS.rda"))
 load(derived_path("final_data_NBS.rda"))
 
 # Save list elements as separate objects in the global environment

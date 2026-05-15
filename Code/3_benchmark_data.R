@@ -45,7 +45,7 @@ ggsave <- function(...) {
 }
 
 ## Load the count data
-load(derived_path("intermediate", "prepared_data_NBS.rda"))
+load(derived_path("prepared_data_NBS.rda"))
 
 ## Save list elements as separate objects in the global environment
 list2env(metadata, envir = .GlobalEnv)

@@ -4,10 +4,8 @@ This folder stores the derived objects that are consumed by the active package s
 
 Retained files include:
 
-- `intermediate/raw_data_NBS.rda`
-- `intermediate/prepared_data_NBS.rda`
-- `intermediate/missing_dates_NBS.rda`
-- `intermediate/missing_dates.xlsx`
+- `raw_data_NBS.rda`
+- `prepared_data_NBS.rda`
 - `final_data_NBS.rda`
 - `final_data_NBS.csv`
 - `NBS_indicators.csv`
@@ -18,4 +16,3 @@ Retained files include:
 - `benchmark_period_table.csv`
 - `correlation_benchmark_rsui_table_new.rda`
 - `mean_only_table_from_correlations.rda`
-

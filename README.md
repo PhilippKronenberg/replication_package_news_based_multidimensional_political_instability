@@ -100,7 +100,7 @@ The R workflow reads and harmonizes the newspaper-count inputs, prepares the mon
 
 - `Code/main.R`: canonical R entrypoint; sources the package scripts in replication order.
 - `Code/run_all.m`: canonical MATLAB entrypoint; runs the external VAR workflow and refreshes the package IRF figures.
-- `Code/1_read_data.R`: reads the Factiva API results and lookup files, harmonizes raw inputs, and writes `Data/Derived/intermediate/raw_data_NBS.rda`.
+- `Code/1_read_data.R`: reads the Factiva API results and lookup files, harmonizes raw inputs, and writes `Data/Derived/raw_data_NBS.rda`.
 - `Code/2_data_preparation.R`: prepares the article-count panel, creates normalized NBS series, writes the core derived data objects, and produces `country_normalization_reference_counts.pdf` and `aggregate_normalization_reference_counts.pdf`.
 - `Code/3_benchmark_data.R`: harmonizes the benchmark datasets listed in `Data/Raw/public/benchmark_data/benchmark_data_websites.txt` and writes `Data/Derived/benchmark_data.rda`, `benchmark_long_table.rda`, `benchmark_period_table.rda`, and their `.csv` counterparts.
 - `Code/figure_code/source_table.R`: generates `Outputs/Main/Tables/newspaper_source_summary.tex`.
@@ -182,4 +182,3 @@ Macro-data source details recorded in the project bibliography:
 - IMF Data Portal: exchange rates, commodity export price indices, CPI, and policy rates. Source URL: `https://data.imf.org`. Bibliography entry: `IMFDataPortal`. Access date recorded in the bibliography: `12 November 2025`.
 - Global Scale Nightlight Time Series Dataset: nighttime lights. Source URL: `https://nightlight.eoatlas.org`. Access date recorded: `1 October 2025`.
 - World Development Indicators DataBank. Source URL: `http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators` and access date `1 October 2025`.
-

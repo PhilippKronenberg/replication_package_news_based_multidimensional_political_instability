@@ -244,6 +244,6 @@ for (folder_num in 1:28) {
 # Save the list containing all folder data into an .rda file
 save(
   data_list,
-  file = ensure_parent_dir(derived_path("intermediate", "raw_data_NBS.rda"))
+  file = ensure_parent_dir(derived_path("raw_data_NBS.rda"))
 )
 

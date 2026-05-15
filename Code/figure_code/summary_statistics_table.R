@@ -22,7 +22,7 @@ source(file.path("Code", "helpers.R"))
 use_package_root()
 source(file.path("Code", "functions.R"))
 
-load(derived_path("intermediate", "prepared_data_NBS.rda"))
+load(derived_path("prepared_data_NBS.rda"))
 load(derived_path("final_data_NBS.rda"))
 list2env(metadata, envir = .GlobalEnv)
 

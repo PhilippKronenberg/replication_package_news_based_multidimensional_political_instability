@@ -32,7 +32,7 @@ use_package_root()
 source(file.path("Code", "functions.R"))
 
 # Load data ---------------------------------------------------------------
-load(derived_path("intermediate", "prepared_data_NBS.rda"))
+load(derived_path("prepared_data_NBS.rda"))
 list2env(metadata, envir = .GlobalEnv)
 load(derived_path("final_data_NBS.rda"))
 load(derived_path("benchmark_long_table.rda"))

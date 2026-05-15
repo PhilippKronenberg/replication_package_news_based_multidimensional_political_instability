@@ -3,8 +3,8 @@
 # Data preparation and NBS construction
 #
 # Produces:
-# - Data/Derived/intermediate/raw_data_NBS.rda
-# - Data/Derived/intermediate/prepared_data_NBS.rda
+# - Data/Derived/raw_data_NBS.rda
+# - Data/Derived/prepared_data_NBS.rda
 # - Data/Derived/final_data_NBS.rda
 # - Data/Derived/final_data_NBS.csv
 # - Data/Derived/NBS_indicators.csv
@@ -69,7 +69,6 @@ library(readxl)
 library(purrr)
 library(zoo)
 library(tidyr) 
-library(writexl)
 
 
 # Load Functions ----------------------------------------------------------
@@ -192,7 +191,7 @@ metadata <- list(list_names = list_names, sublist_topic_names = sublist_topic_na
 # Load the count data
 #load("Code/Rda/data_list.rda")
 #load("Code/Rda/data_list_new.rda")
-load(derived_path("intermediate", "raw_data_NBS.rda"))
+load(derived_path("raw_data_NBS.rda"))
 
 # Prepare Data ----------------------------------------------------------
 
@@ -276,40 +275,6 @@ aggregated_data_list_country <- lapply(data_list_long, function(x) {
 # })
 
 
-# Check for missing observations in the data ------------------------------
-
-missing_dates_per_list <- mapply(
-  check_missing_dates, 
-  aggregated_data_list_country, 
-  names(aggregated_data_list_country), 
-  SIMPLIFY = FALSE
-)
-print(missing_dates_per_list)
-save(
-  missing_dates_per_list,
-  file = ensure_parent_dir(derived_path("intermediate", "missing_dates_NBS.rda"))
-)
-
-# Create an excel file for the missing dates
-library(dplyr)
-df_all <- bind_rows(
-  lapply(names(missing_dates_per_list), function(list_name) {
-    df <- do.call(rbind, lapply(names(missing_dates_per_list[[list_name]]), function(ctry) {
-      data.frame(
-        List         = list_name,
-        Country      = ctry,
-        Missing_Date = as.Date(missing_dates_per_list[[list_name]][[ctry]]),
-        row.names    = NULL
-      )
-    }))
-    df
-  }),
-  .id = NULL
-)
-
-# And write that one:
-write_xlsx(df_all, path = ensure_parent_dir(derived_path("intermediate", "missing_dates.xlsx")))
-
 # Save data ---------------------------------------------------------------
 
 # Save the list containing all folder data into an .rda file
@@ -317,7 +282,7 @@ save(
   data_list_long,
   aggregated_data_list_country,
   metadata,
-  file = ensure_parent_dir(derived_path("intermediate", "prepared_data_NBS.rda"))
+  file = ensure_parent_dir(derived_path("prepared_data_NBS.rda"))
 )
 
 ## Load the count data
