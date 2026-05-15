@@ -3,8 +3,6 @@
 # Benchmark-to-NBS correlation summary table
 #
 # Produces:
-# - Data/Derived/correlation_benchmark_rsui_table_new.rda
-# - Data/Derived/mean_only_table_from_correlations.rda
 # - Outputs/Annex/Tables/benchmark_mean_correlations.tex
 #
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -344,12 +342,6 @@ extract_column <- function(column_name) {
 # Create list of tables, one per factor
 correlation_benchmark_rsui_table <- setNames(lapply(column_names, extract_column), column_names)
 
-# Save list of tables as rda
-save(
-  correlation_benchmark_rsui_table,
-  file = derived_path("correlation_benchmark_rsui_table_new.rda")
-)
-
 # Create mean table -------------------------------------------------------
 
 
@@ -366,13 +358,6 @@ mean_only_table <- purrr::imap(correlation_benchmark_rsui_table, function(df, nm
 # Optional: order columns nicely
 mean_only_table <- mean_only_table %>%
   dplyr::select(`Event Type`, Source, dplyr::all_of(names(correlation_benchmark_rsui_table)))
-
-# (Optional) save as .rda
-save(
-  mean_only_table,
-  file = derived_path("mean_only_table_from_correlations.rda")
-)
-
 
 # --- NEW: round and export MEAN-only table to LaTeX ------------------------
 

@@ -11,8 +11,4 @@ Retained files include:
 - `NBS_indicators.csv`
 - `benchmark_data.rda`
 - `benchmark_long_table.rda`
-- `benchmark_long_table.csv`
 - `benchmark_period_table.rda`
-- `benchmark_period_table.csv`
-- `correlation_benchmark_rsui_table_new.rda`
-- `mean_only_table_from_correlations.rda`

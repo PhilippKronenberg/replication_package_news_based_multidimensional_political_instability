@@ -1527,7 +1527,4 @@ benchmark_period_table <- period_names %>%
 save(benchmark_long_table, file = derived_path("benchmark_long_table.rda"))
 save(benchmark_period_table, file = derived_path("benchmark_period_table.rda"))
 
-write.csv(benchmark_long_table, derived_path("benchmark_long_table.csv"), row.names = FALSE)
-write.csv(benchmark_period_table, derived_path("benchmark_period_table.csv"), row.names = FALSE)
-
 
