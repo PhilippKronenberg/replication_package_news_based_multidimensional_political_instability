@@ -75,7 +75,7 @@ After cloning, run the workflows from the repository root so the relative paths 
 3. Confirm the bundled raw inputs are present under:
    `Data/Raw/public/benchmark_data/`
    `Data/Raw/public/VAR/monthly/Democratic_Republic_of_the_Congo.csv`
-   `Data/Raw/restricted/factiva_api/Results_new/`
+   `Data/Raw/restricted/factiva_api/Results_Factiva_API/`
    `Data/Raw/restricted/factiva_lookup/`
    `Data/Raw/restricted/factiva_rtf_exports/`
 4. If you want to refresh the IRF figures, ensure MATLAB can run `Code/run_all.m`.
@@ -146,7 +146,7 @@ The authors had legitimate access to the bundled data and have included the mate
 
 ### Newspaper Data
 
-- Dow Jones Factiva article-query results used to construct the monthly newspaper-based political instability series are bundled under `Data/Raw/restricted/factiva_api/Results_new/`.
+- Dow Jones Factiva article-query results used to construct the monthly newspaper-based political instability series are bundled under `Data/Raw/restricted/factiva_api/Results_Factiva_API/`.
 - Factiva lookup tables, source lists, and taxonomy support files are bundled under `Data/Raw/restricted/factiva_lookup/`.
 - Supporting raw Factiva RTF export archives are bundled under `Data/Raw/restricted/factiva_rtf_exports/`.
 - The NBS construction relies on a fixed set of country-coverage, source-selection, and newspaper-sample choices documented in the project materials and reflected in the packaged source table.
