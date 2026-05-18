@@ -21,9 +21,9 @@ country_vec = {'Democratic_Republic_of_the_Congo'};
 variables = {'Political Violence', 'Mass Civil Protest', 'Instability within Regime', 'Instability of Regime'};
 
 specs = {
-    struct('name', 'GPRBASELINE', 'resultTag', 'GPRBASELINE'), ...
-    struct('name', 'GPRBASELINE_ENDO_COM', 'resultTag', 'GPRBASELINE_endo_com'), ...
-    struct('name', 'GPRBASELINE_NO_COM', 'resultTag', 'GPRBASELINE_no_com')
+    struct('name', 'GPRBASELINE', 'resultTag', 'GPRBASELINE', 'cacheTag', 'base'), ...
+    struct('name', 'GPRBASELINE_ENDO_COM', 'resultTag', 'GPRBASELINE_endo_com', 'cacheTag', 'endo'), ...
+    struct('name', 'GPRBASELINE_NO_COM', 'resultTag', 'GPRBASELINE_no_com', 'cacheTag', 'nocom')
 };
 
 minn_prior = 0;
@@ -39,10 +39,12 @@ for ss = 1:length(specs)
     spec = specs{ss};
     spec_name = spec.name;
     result_tag = spec.resultTag;
+    cache_tag = spec.cacheTag;
 
     for vv = 1:length(variables)
         variable = variables{vv};
-        outputFolder = fullfile(scriptDir, ['estimate_' mode], result_tag, variable);
+        variable_tag = local_variable_tag(variable);
+        outputFolder = fullfile(scriptDir, ['estimate_' mode], cache_tag, variable_tag);
 
         if ~exist(outputFolder, 'dir')
             mkdir(outputFolder);
@@ -50,6 +52,7 @@ for ss = 1:length(specs)
 
         for c = 1:length(country_vec)
             country = country_vec{c};
+            country_tag = local_country_tag(country);
             mmodel = spec_name;
 
             disp(['Processing specification: ', result_tag]);
@@ -172,10 +175,37 @@ for ss = 1:length(specs)
             VAR.i_var_str_names = i_var_str_names;
             VAR.spec_name = spec_name;
             VAR.result_tag = result_tag;
+            VAR.cache_tag = cache_tag;
+            VAR.country_tag = country_tag;
+            VAR.variable_tag = variable_tag;
 
-            save(fullfile(outputFolder, ['Result_' country '_' result_tag '.mat']), 'VAR');
+            save(fullfile(outputFolder, ['res_' country_tag '_' cache_tag '.mat']), 'VAR');
         end
     end
 end
 
 toc;
+
+function variable_tag = local_variable_tag(variable)
+switch variable
+    case 'Political Violence'
+        variable_tag = 'pv';
+    case 'Mass Civil Protest'
+        variable_tag = 'mcp';
+    case 'Instability within Regime'
+        variable_tag = 'iwr';
+    case 'Instability of Regime'
+        variable_tag = 'ior';
+    otherwise
+        error('Unsupported variable: %s', variable);
+end
+end
+
+function country_tag = local_country_tag(country)
+switch country
+    case 'Democratic_Republic_of_the_Congo'
+        country_tag = 'drc';
+    otherwise
+        error('Unsupported country: %s', country);
+end
+end
