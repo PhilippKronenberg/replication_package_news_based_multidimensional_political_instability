@@ -102,7 +102,7 @@ The R workflow reads and harmonizes the newspaper-count inputs, prepares the mon
 - `Code/run_all.m`: canonical MATLAB entrypoint; runs the external VAR workflow and refreshes the package IRF figures.
 - `Code/1_read_data.R`: reads the Factiva API results and lookup files, harmonizes raw inputs, and writes `Data/Derived/raw_data_NBS.rda`.
 - `Code/2_data_preparation.R`: prepares the article-count panel, creates normalized NBS series, writes the core derived data objects, and produces `country_normalization_reference_counts.pdf` and `aggregate_normalization_reference_counts.pdf`.
-- `Code/3_benchmark_data.R`: harmonizes the benchmark datasets listed in `Data/Raw/public/benchmark_data/benchmark_data_websites.txt` and writes `Data/Derived/benchmark_data.rda`, `benchmark_long_table.rda`, `benchmark_period_table.rda`, and their `.csv` counterparts.
+- `Code/3_benchmark_data.R`: harmonizes the benchmark datasets listed in `Data/Raw/public/benchmark_data/benchmark_data_websites.txt` and writes `Data/Derived/benchmark_data.rda` and `benchmark_long_table.rda`.
 - `Code/figure_code/source_table.R`: generates `Outputs/Main/Tables/newspaper_source_summary.tex`.
 - `Code/figure_code/summary_statistics_table.R`: generates `Outputs/Annex/Tables/article_count_summary_statistics.tex` and `dimension_article_count_summary_statistics.tex`.
 - `Code/figure_code/benchmark_indicator_correlation_table.R`: generates `Outputs/Annex/Tables/benchmark_mean_correlations.tex`.
@@ -156,19 +156,16 @@ The authors had legitimate access to the bundled data and have included the mate
 The benchmark inputs are bundled under `Data/Raw/public/benchmark_data/`. Source URLs documented in `Data/Raw/public/benchmark_data/benchmark_data_websites.txt` include:
 
 - ACLED: `https://acleddata.com/curated-data-files/`
-- Afrobarometer: `https://www.afrobarometer.org/data/merged-data/`
 - Barrett et al. civil unrest materials: `https://www.sciencedirect.com/science/article/pii/S0304387822000803`
 - CNTS: `https://www.cntsdata.com/licenses`
 - Center for Systemic Peace: `https://www.systemicpeace.org/inscrdata.html`
 - Database of Political Institutions: `https://datacatalog.worldbank.org/dataset/wps2283-database-political-institutions`
 - Gallup World Poll access points: `https://wbglibrary.worldbank.org/find/databases`
-- GDELT: `https://www.gdeltproject.org/`
 - ICRG: `https://www.prsgroup.com/explore-our-products/icrg/`
-- Powell and Thyne coup data: `https://www.uky.edu/~clthyn2/coup_data/home.htm`
+- Powell and Thyne coup data for the monthly `Coups` benchmark series: `https://www.uky.edu/~clthyn2/coup_data/home.htm`
 - UCDP: `https://ucdp.uu.se/downloads/`
 - Worldwide Governance Indicators: `https://www.worldbank.org/en/publication/worldwide-governance-indicators`
 - World Handbook of Political Indicators IV: `https://sociology.osu.edu/worldhandbook/world-handbook-information-frequently-asked-questions`
-- World Uncertainty Index: `https://worlduncertaintyindex.com/data/`
 
 The benchmark materials bundled in `Data/Raw/public/benchmark_data/` were accessed in `2025`.
 

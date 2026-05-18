@@ -189,8 +189,6 @@ metadata <- list(list_names = list_names, sublist_topic_names = sublist_topic_na
 # Load Data ---------------------------------------------------------------
 
 # Load the count data
-#load("Code/Rda/data_list.rda")
-#load("Code/Rda/data_list_new.rda")
 load(derived_path("raw_data_NBS.rda"))
 
 # Prepare Data ----------------------------------------------------------
@@ -285,10 +283,6 @@ save(
   file = ensure_parent_dir(derived_path("prepared_data_NBS.rda"))
 )
 
-## Load the count data
-#load("Code/Rda/prepared_data.rda")
-## Save list elements as separate objects in the global environment
-#list2env(metadata, envir = .GlobalEnv)
 
 
 # Define Data ------------------------------------------------------------------
@@ -472,7 +466,7 @@ for (ii in list_elements) {
     height = 10
   )
 }
-## Conclusion: all_cnt to be used for normalization!
+
 
 
 ## Plot country/region specific normalization
@@ -525,7 +519,6 @@ for (ii in list_elements) {
     height = 10
   )
 }
-## Conclusion: all_cnt to be used for normalization!
 ## It makes sense to account for country specific trends as some countries dominate and reveal more pronounced trends as others.
 
 

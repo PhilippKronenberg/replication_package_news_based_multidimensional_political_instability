@@ -5,9 +5,6 @@ https://acleddata.com/curated-data-files/
 https://acleddata.com/curated-data-files/#aggregated
 https://acleddata.com/curated-data-files/#regional
 
-Afrobarometer:
-https://www.afrobarometer.org/data/merged-data/
-
 Barrett et al (2022) Civil Unrest Events:
 https://www.sciencedirect.com/science/article/pii/S0304387822000803
 
@@ -25,9 +22,6 @@ Gallup:
 https://wbglibrary.worldbank.org/find/databases
 https://analyticscampus-gallup-com.eu1.proxy.openathens.net/Tables/
 
-GDELT:
-https://www.gdeltproject.org/
-
 ICRG: kostenpflichtig
 https://www.prsgroup.com/explore-our-products/icrg/
 
@@ -44,8 +38,6 @@ https://www.worldbank.org/en/publication/worldwide-governance-indicators
 World Handbook of Political Indicators IV (WHIV):
 https://sociology.osu.edu/worldhandbook/world-handbook-information-frequently-asked-questions
 
-World Uncertainty Index:
-https://worlduncertaintyindex.com/data/
 
 
 

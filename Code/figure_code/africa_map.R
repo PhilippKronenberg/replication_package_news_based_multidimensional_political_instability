@@ -1,11 +1,6 @@
 
 
 
-
-
-# Install packages if you haven't already
-# install.packages(c("sf", "rnaturalearth", "rnaturalearthdata", "ggplot2"))
-
 # Load required libraries
 library(sf)
 library(rnaturalearth)
@@ -37,20 +32,6 @@ sahel <- c("Mauritania", "Nigeria", "Ghana")
 # Check which countries in the world dataset match (by the "name" column)
 # (Sometimes the country names in the dataset may slightly differ.)
 world$highlight <- ifelse(world$name %in% highlight_countries, "Yes", "No")
- 
-# # Plot the map with ggplot2.
-# # We zoom in on Africa by setting appropriate coordinate limits.
-# ggplot(data = world) +
-#   geom_sf(aes(fill = highlight), color = "black") +
-#   coord_sf(xlim = c(-20, 60), ylim = c(-40, 40)) +
-#   scale_fill_manual(values = c("Yes" = "tomato", "No" = "gray90")) +
-#   theme_minimal() +
-#   labs(title = "African Regions: CEMAC, WAEMU, French-speaking Sahel, and Ghana",
-#        subtitle = "Highlighted in red (tomato)") +
-#   theme(legend.position = "none")
-
-
-
 
 # For adding labels, extract the highlighted countries and compute their centroids
 highlight_df <- world[world$highlight == "Yes", ]
@@ -81,41 +62,3 @@ pp <- ggplot(data = world) +
 
 ggsave(output_file, plot = pp, width = 14, height = 10)
 
-
-
-# 
-# # Create subsets for each region
-# world_cemac <- subset(world, name %in% cemac)
-# world_waemu <- subset(world, name %in% waemu)
-# world_sahel <- subset(world, name %in% sahel)
-# 
-# 
-# # Compute centroids for labeling (using st_point_on_surface() can sometimes work better than st_centroid())
-# labels_sf <- st_point_on_surface(world[world$name %in% c(cemac, waemu, sahel, ghana), ])
-# 
-# # Now plot using ggplot2. The order of the geom_sf() layers matters.
-# ggplot() +
-#   # Plot the full world (or Africa) in a light gray background
-#   geom_sf(data = world, fill = "gray90", color = "black") +
-#   
-#   # Add Sahel region layer first (blue)
-#   geom_sf(data = world_sahel, fill = "blue", color = "black", alpha = 0.7) +
-#   
-#   # Then add WAEMU region (green)
-#   geom_sf(data = world_waemu, fill = "green", color = "black", alpha = 0.7) +
-#   
-#   # Then add CEMAC region (tomato)
-#   geom_sf(data = world_cemac, fill = "tomato", color = "black", alpha = 0.7) +
-#   
-#   # Add labels for the highlighted countries with a smaller text size
-#   geom_sf_text(data = labels_sf, aes(label = name), size = 2.5, color = "black") +
-#   
-#   # Zoom in on Africa (adjust coordinate limits as needed)
-#   coord_sf(xlim = c(-20, 60), ylim = c(-40, 40)) +
-#   
-#   theme_minimal() +
-#   labs(title = "Map of Selected Countries",
-#        #subtitle = "CEMAC (tomato), WAEMU (green), Sahel (blue), Ghana (purple)",
-#        x = "Longitude",
-#        y = "Latitude") +
-#   theme(legend.position = "none")

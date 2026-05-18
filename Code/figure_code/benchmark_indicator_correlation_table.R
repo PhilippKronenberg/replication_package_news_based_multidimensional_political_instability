@@ -34,7 +34,6 @@ load(derived_path("prepared_data_NBS.rda"))
 list2env(metadata, envir = .GlobalEnv)
 load(derived_path("final_data_NBS.rda"))
 load(derived_path("benchmark_long_table.rda"))
-load(derived_path("benchmark_period_table.rda"))
 
 # --- NEW: tag your own NBS dataset with source = "own"
 final_data_NBS <- final_data_NBS %>%
@@ -79,7 +78,7 @@ excluded_event_types <- c(
   "Party Coalitions", "Party Legitimacy", "Purges", "Revolutions",
   "Seven-Year Average", "Seven-Year Total", "Size of Legislature (Lower House)",
   "Size of Legislature Scaled", "Weighted Conflict Index", "polity2",
-  "gdelt.events.norm", "gdelt.articles.norm", "terror attack"
+  "terror attack"
 )
 
 # Filter benchmark events
@@ -153,8 +152,7 @@ make_event_type_short <- function(x) {
     "Number of Seats, Largest Party in Legislature" = "Nr. Seats Largest Party",
     "Size of Legislature Scaled"                    = "Size of Leg.",
     "Majority Party Indicator"                      = "Maj. Party",
-    "terrer attack"                                 = "Terror Attack",
-    "gdelt articles norm"                           = "Articles Norm"
+    "terrer attack"                                 = "Terror Attack"
   )
   
   x <- stringr::str_replace_all(x, replacements)
@@ -165,10 +163,6 @@ make_event_type_short <- function(x) {
 
 benchmark_long_table <- benchmark_long_table %>%
   mutate(event_type = make_event_type_short(event_type))
-
-benchmark_period_table <- benchmark_period_table %>%
-  mutate(event_type = make_event_type_short(event_type))
-
 
 # --- NEW: mapping from benchmark event_type to source (benchmark inputs)
 # benchmark_long_table has column "source" (confirmed)
@@ -258,8 +252,6 @@ event_source_map <- event_source_map %>%
   )
 
 
-
-
 # Initialize list to store correlation matrices per country
 correlation_matrices <- list()
 
@@ -329,7 +321,7 @@ extract_column <- function(column_name) {
       fill = list(Value = NA)
     )
   
-  # --- NEW: mean over all country columns (numeric columns), ignoring NAs
+  # mean over all country columns (numeric columns), ignoring NAs
   out <- out %>%
     mutate(
       MEAN = rowMeans(dplyr::select(., where(is.numeric)), na.rm = TRUE)
@@ -346,7 +338,7 @@ correlation_benchmark_rsui_table <- setNames(lapply(column_names, extract_column
 
 
 
-# --- NEW: build a summary table with only MEAN from each factor table ------
+# build a summary table with only MEAN from each factor table ------
 
 mean_only_table <- purrr::imap(correlation_benchmark_rsui_table, function(df, nm) {
   df %>%
@@ -427,6 +419,7 @@ rows_order <- c(
   "Civil Unrest",
   "Internal Conflict",
   "Coups",
+  "CSP Annual Coups",
   "Annual Coups",
   "Civil War",
   "Viol.",
@@ -460,6 +453,13 @@ mean_only_table_filtered <- mean_only_table %>%
   ) %>%
   dplyr::arrange(`Event Type`) %>%
   dplyr::mutate(`Event Type` = as.character(`Event Type`)) %>%
+  dplyr::mutate(
+    `Event Type` = dplyr::recode(
+      `Event Type`,
+      "Annual Coups" = "CSP Annual Coups",
+      "CSP Annual Coups" = "CSP Annual Coups"
+    )
+  ) %>%
   dplyr::mutate(across(where(is.numeric), ~ round(.x, 2)))
 
 # Export

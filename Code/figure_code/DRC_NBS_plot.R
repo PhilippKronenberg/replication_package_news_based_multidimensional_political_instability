@@ -41,9 +41,6 @@ drc <- df %>%
 drc <- drc %>%
   group_by(list_element) %>%
   mutate(NBS_norm = scale.0.100(NBS_B)/100) %>%
-  # mutate(NBS_norm = ifelse(max(NBS_B, na.rm = TRUE) > 0,
-  #                          NBS_B / max(NBS_B, na.rm = TRUE),
-  #                          NBS_B)) %>%
   ungroup()
 
 # ---- 4) Pretty labels: replace "_" with " " and Title Case ----
@@ -123,8 +120,6 @@ p <- ggplot(drc, aes(x = date, y = NBS_norm, color = list_element_pretty)) +
     legend.position = "bottom"
   )
 
-print(p)
-
 # ---- 8) Export ----
 ggsave(
   filename = main_figure_path("drc_normalized_nbs_events.pdf"),
@@ -134,8 +129,3 @@ ggsave(
   units = "in"
 )
 
-
-# Assumptions:
-# 1) The CSV has columns: country, list_element, date, NBS_B
-# 2) date is parseable as YYYY-MM-DD
-# 3) Normalization is within the 2012–2024 cut, by series max

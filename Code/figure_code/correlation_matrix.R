@@ -97,29 +97,10 @@ build_matrix_list <- function(data_frequency = c("monthly", "annual")) {
     cor_matrix[lower.tri(cor_matrix, diag = TRUE)] <- NA
 
     cor_matrix_df <- as.data.frame(cor_matrix)
-    cor_matrix_df[is.na(cor_matrix_df)] <- ""
     colnames(cor_matrix_df) <- country_to_region$country_code[match(colnames(cor_matrix_df), country_to_region$country_name)]
     rownames(cor_matrix_df) <- country_to_region$country_code[match(rownames(cor_matrix_df), country_to_region$country_name)]
 
-    threshold <- quantile(as.numeric(as.matrix(cor_matrix)), 0.90, na.rm = TRUE)
-    cor_matrix_formatted <- matrix(nrow = nrow(cor_matrix_df), ncol = ncol(cor_matrix_df))
-
-    for (ii in seq_len(nrow(cor_matrix_df))) {
-      for (jj in seq_len(ncol(cor_matrix_df))) {
-        cor_matrix_formatted[ii, jj] <- highlight_top10_with_regions(
-          cor_matrix_df[ii, jj],
-          rownames(cor_matrix_df)[ii],
-          colnames(cor_matrix_df)[jj],
-          threshold
-        )
-      }
-    }
-
-    cor_matrix_formatted <- as.data.frame(cor_matrix_formatted)
-    colnames(cor_matrix_formatted) <- colnames(cor_matrix_df)
-    rownames(cor_matrix_formatted) <- rownames(cor_matrix_df)
-
-    matrix_list[[paste0("Matrix_", topic)]] <- cor_matrix_formatted
+    matrix_list[[paste0("Matrix_", topic)]] <- cor_matrix_df
   }
 
   matrix_list
@@ -129,10 +110,7 @@ plot_heatmaps <- function(matrix_list, output_file) {
   all_plots <- list()
 
   for (mat_name in names(matrix_list)) {
-    cor_matrix_df <- matrix_list[[mat_name]]
-    cor_matrix_df_num <- suppressWarnings(apply(cor_matrix_df, 2, as.numeric))
-    rownames(cor_matrix_df_num) <- rownames(cor_matrix_df)
-    cor_matrix_df_num <- cor_matrix_df_num[ordered_names, ordered_names]
+    cor_matrix_df_num <- matrix_list[[mat_name]][ordered_names, ordered_names]
 
     cor_table <- as.data.frame(cor_matrix_df_num) %>%
       mutate(Series = rownames(cor_matrix_df_num)) %>%

@@ -32,6 +32,9 @@ source(file.path("Code", "2_data_preparation.R"))
 # Run benchmark data
 source(file.path("Code", "3_benchmark_data.R"))
 
+
+# Run plots and tables ----------------------------------------------------
+
 # Source table
 source(file.path("Code", "figure_code", "source_table.R"))
 
@@ -41,11 +44,11 @@ source(file.path("Code", "figure_code", "summary_statistics_table.R"))
 # Benchmark correlation tables
 source(file.path("Code", "figure_code", "benchmark_indicator_correlation_table.R"))
 
+
+# Run plots ---------------------------------------------------------------
+
 # Appendix map
 source(file.path("Code", "figure_code", "africa_map.R"))
-
-
-# Run plots and tables ----------------------------------------------------
 
 # Run normalization plot
 source(file.path("Code", "figure_code", "normalization_plot.R"))
@@ -61,11 +64,6 @@ source(file.path("Code", "figure_code", "correlation_matrix.R"))
 
 # Appendix contagion networks
 source(file.path("Code", "figure_code", "contagion_plot.R"))
-
-# Additional non-package generators are preserved in
-# `../non_package_materials/Code/`.
-
-
 
 
 

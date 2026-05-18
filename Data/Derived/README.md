@@ -11,4 +11,3 @@ Retained files include:
 - `NBS_indicators.csv`
 - `benchmark_data.rda`
 - `benchmark_long_table.rda`
-- `benchmark_period_table.rda`
