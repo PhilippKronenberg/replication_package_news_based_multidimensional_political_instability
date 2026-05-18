@@ -19,9 +19,9 @@ variables = {'Political Violence', 'Mass Civil Protest', 'Instability within Reg
 country_vec = {'Democratic_Republic_of_the_Congo'};
 
 specs = {
-    struct('resultTag', 'GPRBASELINE', 'cacheTag', 'base', 'targetDir', fullfile(packageRoot, 'Outputs', 'Main', 'Figures'), 'targetName', 'IRF_%s_GPRBASELINE.png'), ...
-    struct('resultTag', 'GPRBASELINE_endo_com', 'cacheTag', 'endo', 'targetDir', fullfile(packageRoot, 'Outputs', 'Annex', 'Figures'), 'targetName', 'IRF_%s_GPRBASELINE_endo_com.png'), ...
-    struct('resultTag', 'GPRBASELINE_no_com', 'cacheTag', 'nocom', 'targetDir', fullfile(packageRoot, 'Outputs', 'Annex', 'Figures'), 'targetName', 'IRF_%s_GPRBASELINE_no_com.png')
+    struct('resultTag', 'GPRBASELINE', 'cacheTag', 'base', 'targetDir', fullfile(packageRoot, 'Outputs', 'Main', 'Figures'), 'targetName', 'IRF_DRC_baseline.png'), ...
+    struct('resultTag', 'GPRBASELINE_endo_com', 'cacheTag', 'endo', 'targetDir', fullfile(packageRoot, 'Outputs', 'Annex', 'Figures'), 'targetName', 'IRF_DRC_endo_com.png'), ...
+    struct('resultTag', 'GPRBASELINE_no_com', 'cacheTag', 'nocom', 'targetDir', fullfile(packageRoot, 'Outputs', 'Annex', 'Figures'), 'targetName', 'IRF_DRC_no_com.png')
 };
 
 Horizon = 13;
@@ -101,8 +101,7 @@ for ss = 1:length(specs)
 
         sgtitle(['Impulse Responses to Political Instability Shock: ', strrep(country, '_', ' ')], 'FontSize', 16);
 
-        filenameSafe = strrep(country, ' ', '_');
-        outputFile = fullfile(spec.targetDir, sprintf(spec.targetName, filenameSafe));
+        outputFile = fullfile(spec.targetDir, spec.targetName);
 
         figure(fig);
         set(fig, 'Visible', 'on');

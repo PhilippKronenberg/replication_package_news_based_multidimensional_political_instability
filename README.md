@@ -127,13 +127,13 @@ The R workflow reads and harmonizes the newspaper-count inputs, prepares the mon
 | Political Instability Article Counts by Topic | `Outputs/Main/Figures/topic_intensity_by_year.pdf` | `Code/figure_code/country_count_plot.R` |
 | Political Instability Article Counts by Country | `Outputs/Main/Figures/country_intensity_by_year.pdf` | `Code/figure_code/country_count_plot.R` |
 | Normalized DRC NBS Indicators | `Outputs/Main/Figures/drc_normalized_nbs_events.pdf` | `Code/figure_code/DRC_NBS_plot.R` |
-| DRC Impulse Responses | `Outputs/Main/Figures/IRF_Democratic_Republic_of_the_Congo_GPRBASELINE.png` | `Code/run_all.m` |
+| DRC Impulse Responses | `Outputs/Main/Figures/IRF_DRC_baseline.png` | `Code/run_all.m` |
 | Africa Sample Map | `Outputs/Annex/Figures/africa_map.pdf` | `Code/figure_code/africa_map.R` |
 | Aggregate Normalization Reference Counts | `Outputs/Annex/Figures/aggregate_normalization_reference_counts.pdf` | `Code/2_data_preparation.R` |
 | Four appendix normalization figures | `Outputs/Annex/Figures/nbs_ab_*_by_country.pdf` | `Code/figure_code/normalization_plot.R` |
 | Correlation heatmaps | `Outputs/Annex/Figures/monthly_correlation_heatmaps.pdf`, `annual_correlation_heatmaps.pdf` | `Code/figure_code/correlation_matrix.R` |
 | Four contagion network figures | `Outputs/Annex/Figures/contagion_network_geo_*.pdf` | `Code/figure_code/contagion_plot.R` |
-| DRC robustness IRFs | `Outputs/Annex/Figures/IRF_Democratic_Republic_of_the_Congo_GPRBASELINE_endo_com.png`, `IRF_Democratic_Republic_of_the_Congo_GPRBASELINE_no_com.png` | `Code/run_all.m` |
+| DRC robustness IRFs | `Outputs/Annex/Figures/IRF_DRC_endo_com.png`, `IRF_DRC_no_com.png` | `Code/run_all.m` |
 | Summary Statistics: Monthly Article Counts | `Outputs/Annex/Tables/article_count_summary_statistics.tex` | `Code/figure_code/summary_statistics_table.R` |
 | Mean Correlations across Countries | `Outputs/Annex/Tables/benchmark_mean_correlations.tex` | `Code/figure_code/benchmark_indicator_correlation_table.R` |
 | Summary Statistics for All Dimensions | `Outputs/Annex/Tables/dimension_article_count_summary_statistics.tex` | `Code/figure_code/summary_statistics_table.R` |
