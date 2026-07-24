@@ -132,7 +132,7 @@ for ss = 1:length(specs)
             while record < nd
                 if minn_prior == 1
                     Sigmadraw = iwishrnd(Sigmau * (T - n * p - 1), T - n * p - 1);
-                    B_new = mvnrnd(reshape(B, n * (n * p + 1), 1), kron(Sigmadraw, inv(X' * X)));
+                    B_new = mvnrnd(reshape(B, m * n, 1), kron(Sigmadraw, inv(X' * X)));
                     Bdraw = reshape(B_new, m, n);
                 else
                     R = mvnrnd(zeros(n, 1), STinv / nnuT, nnuT)';

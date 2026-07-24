@@ -65,8 +65,35 @@
 % Dummy Observations (VARX)
 %==============================
 
-tau = 0.5; d = 3; w = 1;
-lambda = 0.1; mu = 0.1;
+if exist('tau_override', 'var')
+    tau = tau_override;
+else
+    tau = 0.5;
+end
+
+if exist('d_override', 'var')
+    d = d_override;
+else
+    d = 3;
+end
+
+if exist('w_override', 'var')
+    w = w_override;
+else
+    w = 1;
+end
+
+if exist('lambda_override', 'var')
+    lambda = lambda_override;
+else
+    lambda = 0.1;
+end
+
+if exist('mu_override', 'var')
+    mu = mu_override;
+else
+    mu = 0.1;
+end
 
 nv = length(endo_vars);
 nobs = size(YY_endo,1)-T0;
