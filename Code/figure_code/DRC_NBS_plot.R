@@ -25,10 +25,10 @@ df <- read_csv(derived_path("final_data_NBS.csv"))
 
 country <- "DR Congo"
 shocks <- c(
-  "political_violence",
-  "mass_civil_protest",
+  "instability_of_regime",
   "instability_within_regime",
-  "instability_of_regime"
+  "mass_civil_protest",
+  "political_violence"
 )
 
 # ---- 2) Filter + date + cut sample ----
@@ -40,7 +40,7 @@ drc <- df %>%
 # ---- 3) Normalize within 2012–2024 window: max = 1 per series ----
 drc <- drc %>%
   group_by(list_element) %>%
-  mutate(NBS_norm = scale.0.100(NBS_B)/100) %>%
+  mutate(NBS_norm = scale.0.100(NBS_A)/100) %>%
   ungroup()
 
 # ---- 4) Pretty labels: replace "_" with " " and Title Case ----
@@ -85,39 +85,38 @@ events <- events %>%
   mutate(indicator_pretty = factor(indicator_pretty, levels = pretty_levels))
 
 # Use a discrete hue palette and freeze it to your levels
-pal <- hue_pal()(length(pretty_levels))
+# Matplotlib default (tab10) colors, matched to the reference figure
+pal <- c("#1f77b4", "#ff7f0e", "#2ca02c", "#d62728")
 names(pal) <- pretty_levels
 
 # ---- 7) Plot ----
 p <- ggplot(drc, aes(x = date, y = NBS_norm, color = list_element_pretty)) +
-  geom_line(linewidth = 0.7) +
+  geom_line(linewidth = 0.9) +
   geom_vline(
     data = events,
     aes(xintercept = event_date, color = indicator_pretty),
     linetype = "dashed",
     linewidth = 0.6,
-    alpha = 0.85,
+    alpha = 0.9,
     inherit.aes = FALSE
   ) +
   scale_color_manual(values = pal, name = NULL) +
-  scale_y_continuous(limits = c(-0.02, 1.05)) +
+  scale_x_date(breaks = seq(as.Date("2012-01-01"), as.Date("2024-01-01"), by = "2 years"), date_labels = "%Y") +
+  scale_y_continuous(limits = c(0, 1.02), breaks = seq(0, 1, 0.2)) +
   labs(
     x = "Date",
-    y = "Normalized NBS B (Max = 1)",
+    y = "Normalized NBS A (Max = 1)",
     #title = "Normalized News-Based Political Instability Indicators DRC (2012 2024)",
     #subtitle = "Max Within Series = 1; Dashed Lines = Dated Political Episodes"
   ) +
-  theme_minimal(base_size = 12) +
-  
+  theme_bw(base_size = 11) +
   theme(
-    axis.text.x   = element_text(size = 14),
-    axis.text.y   = element_text(size = 14),
-    axis.title.x  = element_text(size = 16),
-    axis.title.y  = element_text(size = 16),
-    strip.text    = element_text(size = 16, face = "bold"),
-    legend.text   = element_text(size = 14),
-    legend.title  = element_text(size = 16, face = "bold"),
-    legend.position = "bottom"
+    panel.grid = element_blank(),
+    legend.position = "inside",
+    legend.position.inside = c(0.985, 0.985),
+    legend.justification = c("right", "top"),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_blank()
   )
 
 # ---- 8) Export ----
