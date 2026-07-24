@@ -44,7 +44,7 @@ breakss(3) = breakss(2)+ww*nv;
 lammean = lam*premom(:,1)';
 ydu(breakss(3)+1,:) = lammean;
 
-xdu(breakss(3)+1,:) = [kron(ones(1,nlags),lammean) lam];
+xdu(breakss(3)+1,:) = [kron(ones(1,nlags),lammean) lam zeros(1,nex-1)];
 
 breakss(4) = breakss(3)+1;
 
