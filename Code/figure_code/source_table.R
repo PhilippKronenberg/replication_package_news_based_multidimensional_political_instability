@@ -14,16 +14,14 @@ cat("\014")
 
 # Load Packages -----------------------------------------------------------
 
-library(tidyverse)
-library(dplyr)
-library(xtable)
-library(tidyr)
+# Loads the packages this script needs and installs them if they are missing
+source(file.path("Code", "helpers.R"))
+ensure_packages(c("tidyverse", "dplyr", "xtable", "tidyr"))
 
 
 # Load Functions ----------------------------------------------------------
 
 # Load functions
-source(file.path("Code", "helpers.R"))
 use_package_root()
 source(file.path("Code", "functions.R"))
 

@@ -12,33 +12,32 @@ cat("\014")
 
 # Packages ----------------------------------------------------------------
 
-library(tidyr) 
-library(tidyverse)
-library(dplyr)
-library(countrycode)
-library(readxl)
+# Loads the packages this script needs and installs them if they are missing
+source(file.path("Code", "helpers.R"))
+ensure_packages(c("tidyr", "tidyverse", "dplyr", "countrycode", "readxl", "haven"))
 
 
 # Preliminaries -----------------------------------------------------------
 
 # Load functions
-source(file.path("Code", "helpers.R"))
 use_package_root()
 source(file.path("Code", "functions.R"))
 
 # Define working directory
 wd <- package_root()
-benchmark_dir <- first_existing_path(
+benchmark_dir <- require_existing_path(
+  "the benchmark inputs (Data/Raw/public/benchmark_data)",
   package_path("Data", "Raw", "public", "benchmark_data"),
-  non_package_path("private_data", "Data", "benchmark data")
+  non_package_path("Data", "benchmark data")
 )
 benchmark_file <- function(...) {
   file.path(benchmark_dir, ...)
 }
+# Target for the benchmark diagnostic figures. `ggsave()` is disabled below in
+# the package version, so nothing is written here; the path stays inside the
+# session temp directory so that no folders are created outside the package.
 benchmark_figure_dir <- dirname(
-  ensure_parent_dir(
-    non_package_path("Outputs", "Annex", "benchmark_figures", "placeholder.txt")
-  )
+  ensure_parent_dir(file.path(tempdir(), "benchmark_figures", "placeholder.txt"))
 )
 ggsave <- function(...) {
   invisible(NULL)
@@ -589,7 +588,6 @@ ggsave(file.path(benchmark_figure_dir, "coup_plot.pdf"), plot = coup_plot, width
 
 # Missing: Equatorial Guinea, Gabon, Benin, Burkina Faso, Guinea-Bissau, Ghana, Mauritania
 
-library(haven)
 df.ucdp_esov.in <- read_dta(benchmark_file("UCDP dataset", "The Ethnic One-Sided Violence (EOSV) Dataset", "EOSV Dataset.dta"))
 
 df.ucdp_esov_long <- df.ucdp_esov.in %>%

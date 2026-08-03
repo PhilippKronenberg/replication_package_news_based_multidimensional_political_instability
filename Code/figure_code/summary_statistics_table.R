@@ -12,13 +12,11 @@ rm(list = ls())
 cat("\014")
 
 # Packages ----------------------------------------------------------------
-library(dplyr)
-library(purrr)
-library(tidyr)
-library(xtable)
+# Loads the packages this script needs and installs them if they are missing
+source(file.path("Code", "helpers.R"))
+ensure_packages(c("dplyr", "purrr", "tidyr", "xtable"))
 
 # Setup -------------------------------------------------------------------
-source(file.path("Code", "helpers.R"))
 use_package_root()
 source(file.path("Code", "functions.R"))
 

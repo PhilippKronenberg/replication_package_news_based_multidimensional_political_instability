@@ -44,7 +44,9 @@ replication_package_news_based_multidimensional_political_instability/
 - R version `4.5.2`
 - Python version `3.14.4`
 - MATLAB release `R2025a`
-- R packages used in the scripts under `Code/`, including `jsonlite`, `ggplot2`, `tidyverse`, `dplyr`, `xtable`, `lubridate`, `readxl`, `purrr`, `zoo`, `tidyr`, `writexl`, `rnaturalearth`, and `sf`
+- R packages used in the scripts under `Code/`: `countrycode`, `dplyr`, `geomtextpath`, `ggplot2`, `ggpubr`, `haven`, `jsonlite`, `lubridate`, `purrr`, `readr`, `readxl`, `rnaturalearth`, `rnaturalearthdata`, `scales`, `sf`, `stringr`, `tidyr`, `tidyverse`, `xtable`, and `zoo`
+
+  These do not have to be installed by hand. `Code/main.R` loads the full list through `ensure_packages()` in `Code/helpers.R` and installs whatever is missing from CRAN; every individual script does the same for the subset it needs, so the scripts can also be run one at a time. To install nothing automatically, set the environment variable `NBS_INSTALL_MISSING=FALSE` before running — the scripts then stop with an error listing the packages to install manually.
 - Sufficient local storage for the bundled raw inputs and derived files
 
 Runtime:
@@ -70,14 +72,13 @@ After cloning, run the workflows from the repository root so the relative paths 
 
 ## Setup Instructions
 
-1. Open an R session and set the working directory to the repository root.
-2. Ensure the required R packages are installed.
+1. Open an R session and set the working directory to the repository root. All scripts resolve their paths relative to that root, so they have to be started from there (`source("Code/main.R")`, not from inside `Code/`).
+2. The required R packages are installed automatically on first run; see the note under Requirements if you prefer to install them yourself.
 3. Confirm the bundled raw inputs are present under:
    `Data/Raw/public/benchmark_data/`
    `Data/Raw/public/VAR/monthly/Democratic_Republic_of_the_Congo.csv`
    `Data/Raw/restricted/factiva_api/Results_Factiva_API/`
    `Data/Raw/restricted/factiva_lookup/`
-   `Data/Raw/restricted/factiva_rtf_exports/`
 4. If you want to refresh the IRF figures, ensure MATLAB can run `Code/run_all.m`.
 
 ## Instructions for Replicators
@@ -142,13 +143,12 @@ The R workflow reads and harmonizes the newspaper-count inputs, prepares the mon
 
 Availability of data and code: all data required to reproduce the documented package outputs are included in this repository.
 
-The authors had legitimate access to the bundled data and have included the materials required for this replication package. Code is distributed under the package [LICENSE](C:/Users/kphilipp/GitHub/newspaper_sentiment/replication_package_news_based_multidimensional_political_instability/LICENSE). Bundled third-party data remain attributable to their original producers and should be cited accordingly when reused.
+The authors had legitimate access to the bundled data and have included the materials required for this replication package. Code is distributed under the package [LICENSE](LICENSE). Bundled third-party data remain attributable to their original producers and should be cited accordingly when reused.
 
 ### Newspaper Data
 
 - Dow Jones Factiva article-query results used to construct the monthly newspaper-based political instability series are bundled under `Data/Raw/restricted/factiva_api/Results_Factiva_API/`.
 - Factiva lookup tables, source lists, and taxonomy support files are bundled under `Data/Raw/restricted/factiva_lookup/`.
-- Supporting raw Factiva RTF export archives are bundled under `Data/Raw/restricted/factiva_rtf_exports/`.
 - The NBS construction relies on a fixed set of country-coverage, source-selection, and newspaper-sample choices documented in the project materials and reflected in the packaged source table.
 
 ### Benchmark Data Sources

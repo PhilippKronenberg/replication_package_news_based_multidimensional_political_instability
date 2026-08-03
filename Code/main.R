@@ -20,6 +20,11 @@ source(file.path("Code", "helpers.R"))
 use_package_root()
 wd <- package_root()
 
+# Load every package the workflow needs, installing the missing ones up front.
+# Set NBS_INSTALL_MISSING=FALSE before running to get a list of the packages to
+# install manually instead.
+ensure_packages(replication_packages())
+
 
 # Run files ---------------------------------------------------------------
 

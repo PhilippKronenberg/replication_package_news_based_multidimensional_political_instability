@@ -56,32 +56,30 @@ cat("\014")
 
 # Packages ----------------------------------------------------------------
 
-library(jsonlite)
-library(ggplot2)
-library(tidyverse)
-library(dplyr)
-library(xtable)
-library(lubridate)
-library(countrycode)
-library(readxl)
-library(purrr)
+# Loads the packages this script needs and installs them if they are missing
+source(file.path("Code", "helpers.R"))
+ensure_packages(c(
+  "jsonlite", "ggplot2", "tidyverse", "dplyr", "xtable", "lubridate",
+  "countrycode", "readxl", "purrr"
+))
 
 
 # Preliminaries -----------------------------------------------------------
 
 # Define working directory
-source(file.path("Code", "helpers.R"))
 use_package_root()
 wd <- package_root()
 
-restricted_results_root <- first_existing_path(
-  package_path("Data", "Raw", "restricted", "factiva_api", "Results_new"),
+restricted_results_root <- require_existing_path(
+  "the Factiva API results (Data/Raw/restricted/factiva_api/Results_Factiva_API)",
+  package_path("Data", "Raw", "restricted", "factiva_api", "Results_Factiva_API"),
   non_package_path("archive", "Code_working", "Data_download", "Results_new")
 )
 
-factiva_lookup_dir <- first_existing_path(
+factiva_lookup_dir <- require_existing_path(
+  "the Factiva lookup files (Data/Raw/restricted/factiva_lookup)",
   package_path("Data", "Raw", "restricted", "factiva_lookup"),
-  non_package_path("private_data", "Literatur", "Factiva", "Lookup Codes to Share")
+  non_package_path("Literatur", "Factiva", "Lookup Codes to Share")
 )
 
 # Define country codes
@@ -196,12 +194,18 @@ for (folder_num in 1:28) {
   }
 
   # Read in country names from Factiva
-  cntr_descriptions <- read.csv(file.path(factiva_lookup_dir, "regions.csv"))
+  cntr_descriptions <- read.csv(
+    require_existing_path(
+      "the Factiva region lookup file regions.csv",
+      file.path(factiva_lookup_dir, "regions.csv")
+    )
+  )
   cntr_descriptions$cntr_code <- tolower(cntr_descriptions$code)
-  
+
   # Read in source names from Factiva
   source_descriptions <- read.csv(
-    first_existing_path(
+    require_existing_path(
+      "the Factiva source lookup file All Active FA Sources 8-22-22.CSV",
       file.path(factiva_lookup_dir, "All Active FA Sources 8-22-22.CSV"),
       file.path(factiva_lookup_dir, "All Active FA Sources 8-22-22.csv")
     )

@@ -12,20 +12,14 @@ rm(list = ls())
 cat("\014")
 
 # Packages ----------------------------------------------------------------
-library(jsonlite)
-library(ggplot2)
-library(tidyverse)
-library(dplyr)
-library(xtable)
-library(lubridate)
-library(readxl)
-library(purrr)
-library(zoo)
-library(tidyr)
-library(stringr)
+# Loads the packages this script needs and installs them if they are missing
+source(file.path("Code", "helpers.R"))
+ensure_packages(c(
+  "jsonlite", "ggplot2", "tidyverse", "dplyr", "xtable", "lubridate",
+  "readxl", "purrr", "zoo", "tidyr", "stringr"
+))
 
 # Load Functions ----------------------------------------------------------
-source(file.path("Code", "helpers.R"))
 use_package_root()
 source(file.path("Code", "functions.R"))
 

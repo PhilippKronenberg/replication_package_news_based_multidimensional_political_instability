@@ -11,17 +11,13 @@
 rm(list = ls())
 cat("\014")
 
-library(dplyr)
-library(tidyr)
-library(purrr)
-library(ggplot2)
-library(readr)
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(geomtextpath)
-
+# Loads the packages this script needs and installs them if they are missing
 source(file.path("Code", "helpers.R"))
+ensure_packages(c(
+  "dplyr", "tidyr", "purrr", "ggplot2", "readr", "sf", "rnaturalearth",
+  "rnaturalearthdata", "geomtextpath"
+))
+
 use_package_root()
 source(file.path("Code", "functions.R"))
 

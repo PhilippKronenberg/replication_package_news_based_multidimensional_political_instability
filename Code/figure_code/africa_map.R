@@ -1,12 +1,9 @@
 
 
 
-# Load required libraries
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthdata)
-library(ggplot2)
+# Load required libraries, installing them if they are missing
 source(file.path("Code", "helpers.R"))
+ensure_packages(c("sf", "rnaturalearth", "rnaturalearthdata", "ggplot2"))
 use_package_root()
 output_file <- ensure_parent_dir(annex_figure_path("africa_map.pdf"))
 
