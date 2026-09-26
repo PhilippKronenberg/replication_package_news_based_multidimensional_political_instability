@@ -203,3 +203,5 @@ Macro-data source details recorded in the project bibliography:
 - The annual NBS indicators and the World Development Indicators series used by `Section_4.3/NBS_Master.do` are bundled under `Section_4.3/Data/NBS data/` and `Section_4.3/Data/WDI/`.
 - The World Bank Enterprise Surveys microdata (`New_Comprehensive_May_5_2025.dta`) are **not included**. They are available free of charge after registration at `https://www.enterprisesurveys.org`, but the terms of use do not permit redistribution. Replicators must obtain the file themselves and place it in `Section_4.3/Data/WBES/`.
 - The analysis file `Section_4.3/Data/Finale_Data/Finale_Data.dta` is still firm-level microdata derived from the Enterprise Surveys and is therefore not included either; `NBS_Master.do` rebuilds it from the downloaded file.
+
+*Access:* free registration at `enterprisesurveys.org`; micro-data are not redistributable.
