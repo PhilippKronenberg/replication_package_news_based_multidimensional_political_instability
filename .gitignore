@@ -4,3 +4,8 @@ Data/Raw/restricted/factiva_lookup/Official Companies Taxonomy File.csv
 .Rhistory
 .RData
 .DS_Store
+
+# Section 4.3: WBES firm-level microdata and the firm-level analysis file derived from it.
+# Licence-restricted (not redistributable); see Section_4.3/README.md, §4.3.
+Section_4.3/Data/WBES/*.dta
+Section_4.3/Data/Finale_Data/

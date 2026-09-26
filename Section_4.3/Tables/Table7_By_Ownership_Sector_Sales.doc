@@ -1,0 +1,15 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\froman Times New Roman;}{\f1\fswiss Arial;}{\f2\fmodern Courier New;}}\f1\paperw15840\paperh12240\lndscpsxn
+\pard\qc\sb79\sa79\fs29 Table 7. Firms' Sales and Political Violence: By ownership and sector\par
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \ql \cell \qc Domestic firms\cell \qc Foreign firms\cell \qc Manufacturing\cell \qc Service\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \ql \cell \qc (1)\cell \qc (2)\cell \qc (3)\cell \qc (4)\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb79\sa0\trqc\clbrdrt\brdrs\cellx5040\clbrdrt\brdrs\cellx7392\clbrdrt\brdrs\cellx9576\clbrdrt\brdrs\cellx11760\clbrdrt\brdrs\cellx13272\fs24 \pard\intbl\ql l1NBS_A_4\cell \pard\intbl\tqdec\tx880 {\fs24 -1.05}\cell \pard\intbl\tqdec\tx1016 {\fs24 -0.08}\cell \pard\intbl\tqdec\tx811 {\fs24 -1.04}\cell \pard\intbl\tqdec\tx538 {\fs24 -1.08}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \pard\intbl\ql \cell \pard\intbl\tqdec\tx880 {\fs20 (0.32)***}\cell \pard\intbl\tqdec\tx1016 {\fs20 (0.70)}\cell \pard\intbl\tqdec\tx811 {\fs20 (0.27)***}\cell \pard\intbl\tqdec\tx538 {\fs20 (0.27)***}\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \pard\intbl\ql N_L2 \cell \pard\intbl\tqdec\tx880 15\cell \pard\intbl\tqdec\tx1016 14\cell \pard\intbl\tqdec\tx811 14\cell \pard\intbl\tqdec\tx538 14\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \pard\intbl\ql Sb_Rsq_L1 \cell \pard\intbl\tqdec\tx880 0.79\cell \pard\intbl\tqdec\tx1016 0.84\cell \pard\intbl\tqdec\tx811 0.75\cell \pard\intbl\tqdec\tx538 0.85\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \pard\intbl\ql Sb_Rsq_L2\cell \pard\intbl\tqdec\tx880 0.99\cell \pard\intbl\tqdec\tx1016 0.92\cell \pard\intbl\tqdec\tx811 0.99\cell \pard\intbl\tqdec\tx538 0.99\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \pard\intbl\ql Control Variables\cell \pard\intbl\tqdec\tx880 Yes\cell \pard\intbl\tqdec\tx1016 Yes\cell \pard\intbl\tqdec\tx811 Yes\cell \pard\intbl\tqdec\tx538 Yes\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa0\trqc\cellx5040\cellx7392\cellx9576\cellx11760\cellx13272\fs24 \pard\intbl\ql # Countries\cell \pard\intbl\tqdec\tx880 15\cell \pard\intbl\tqdec\tx1016 14\cell \pard\intbl\tqdec\tx811 14\cell \pard\intbl\tqdec\tx538 14\cell\row
+\trowd\intbl\trautofit1\trgaph144\sb0\sa79\trqc\clbrdrb\brdrs\cellx5040\clbrdrb\brdrs\cellx7392\clbrdrb\brdrs\cellx9576\clbrdrb\brdrs\cellx11760\clbrdrb\brdrs\cellx13272\fs24 \pard\intbl\ql - Fixed Effects: Country, Year\cell \pard\intbl\tqdec\tx880 Yes\cell \pard\intbl\tqdec\tx1016 Yes\cell \pard\intbl\tqdec\tx811 Yes\cell \pard\intbl\tqdec\tx538 Yes\cell\row
+\pard\qc\sb79\sa79\fs19 * {\i p}<0.1; ** {\i p}<0.05; *** {\i p}<0.01\par
+\pard\sb0\sa0\fs24\par
+}
