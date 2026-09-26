@@ -4,9 +4,10 @@ Copyright (C) 2026 Philipp Kronenberg and Pierre Jean-Claude Mandon
 
 License summary:
 
-- Code in `Code/` is licensed under the GNU General Public License, version 3 or any later version.
+- Code in `Code/` and the Stata code in `Section_4.3/` (`NBS_Master.do`) is licensed under the GNU General Public License, version 3 or any later version.
 - Generated package outputs and package documentation are distributed for replication and research use together with this repository.
 - Bundled third-party data remain attributable to their original producers and continue to be governed by the original source terms, attribution requirements, and reuse restrictions that apply to those data.
+- The World Bank Enterprise Surveys microdata used in `Section_4.3/`, and the firm-level analysis file derived from them, are not included in this repository and are not covered by this license. They are governed by the World Bank Enterprise Surveys terms of use and must be obtained by users directly from `enterprisesurveys.org`.
 
 The package authors affirm that they had legitimate access to the bundled materials included in this repository and that the package may be redistributed in its current replication-package form.
 
