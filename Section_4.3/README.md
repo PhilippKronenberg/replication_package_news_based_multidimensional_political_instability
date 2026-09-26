@@ -144,19 +144,8 @@ The harmonized global WBES panel, 2006–2024 waves.
 | Controls | `b1`, `b2a`, `b2b`, `b2c`, `b5`, `b7a`, `c7`, `c8`, `c10`, `d12b`, `k8` |
 | Recoded for missing values | a further 70-odd questionnaire items, listed in PART IV |
 
-*Access:* **not included.** The micro-data are free, but the World Bank's terms of use do not allow
-them to be redistributed. To obtain the file:
-
-1. Register for a free account at <https://www.enterprisesurveys.org> (Data portal) and accept the
-   terms of use.
-2. Download the harmonized **Comprehensive** Enterprise Surveys dataset in Stata format. The paper
-   uses the release of 5 May 2025 (about 1.2 GB).
-3. Save it as `Data/WBES/New_Comprehensive_May_5_2025.dta`. If your download has a different file
-   name, rename it or edit the `use` statement at the start of PART III of `NBS_Master.do`.
-
-A later release of the Comprehensive dataset may add survey waves or revise existing ones, so the
-sample sizes and estimates can differ slightly from the paper. The authors can share the exact
-release used with the replication team on request.
+*Access:* **not included.** Free registration at `enterprisesurveys.org`; micro-data are not
+redistributable.
 
 ### 4.4 Treatment of sales
 

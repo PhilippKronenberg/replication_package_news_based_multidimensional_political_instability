@@ -8,6 +8,7 @@ The canonical entrypoints are:
 
 - `Code/main.R` for the R workflow
 - `Code/run_all.m` for the MATLAB workflow
+- `Section_4.3/NBS_Master.do` for the Stata workflow of the firm-level application (Section 4.3, Tables 3 to 7)
 
 ## Folder Structure
 
@@ -30,13 +31,18 @@ replication_package_news_based_multidimensional_political_instability/
 │   │   ├── public/
 │   │   └── restricted/
 │   └── Derived/
-└── Outputs/
-    ├── Main/
-    │   ├── Figures/
-    │   └── Tables/
-    └── Annex/
-        ├── Figures/
-        └── Tables/
+├── Outputs/
+│   ├── Main/
+│   │   ├── Figures/
+│   │   └── Tables/
+│   └── Annex/
+│       ├── Figures/
+│       └── Tables/
+└── Section_4.3/
+    ├── README.md
+    ├── NBS_Master.do
+    ├── Data/
+    └── Tables/
 ```
 
 ## Requirements
@@ -44,6 +50,7 @@ replication_package_news_based_multidimensional_political_instability/
 - R version `4.5.2`
 - Python version `3.14.4`
 - MATLAB release `R2025a`
+- Stata `17` or later, for `Section_4.3/` only (user packages `kountry`, `outreg`, `estout`, installed automatically by the do-file)
 - R packages used in the scripts under `Code/`: `countrycode`, `dplyr`, `geomtextpath`, `ggplot2`, `ggpubr`, `haven`, `jsonlite`, `lubridate`, `purrr`, `readr`, `readxl`, `rnaturalearth`, `rnaturalearthdata`, `scales`, `sf`, `stringr`, `tidyr`, `tidyverse`, `xtable`, and `zoo`
 
   These do not have to be installed by hand. `Code/main.R` loads the full list through `ensure_packages()` in `Code/helpers.R` and installs whatever is missing from CRAN; every individual script does the same for the subset it needs, so the scripts can also be run one at a time. To install nothing automatically, set the environment variable `NBS_INSTALL_MISSING=FALSE` before running — the scripts then stop with an error listing the packages to install manually.
@@ -97,6 +104,16 @@ run("Code/run_all.m")
 
 The R workflow reads and harmonizes the newspaper-count inputs, prepares the monthly NBS series, constructs benchmark comparison data, and writes the package outputs. The MATLAB workflow refreshes the IRF figures used in the DRC case study.
 
+### Firm-Level Application (Section 4.3)
+
+The firm-level application, which links the annual NBS indicators to firm performance in the World Bank Enterprise Surveys (Tables 3 to 7), is a separate Stata workflow in `Section_4.3/`. It is self-contained and does not depend on running the R or MATLAB workflows first. Before running it, download the Enterprise Surveys microdata, which are not included in this repository (see Data Availability), then set `$root` in `Section_4.3/NBS_Master.do` to the `Section_4.3` folder and run:
+
+```stata
+do "Section_4.3/NBS_Master.do"
+```
+
+See [`Section_4.3/README.md`](Section_4.3/README.md) for the input data, run switches, and specification.
+
 ## Code Description
 
 - `Code/main.R`: canonical R entrypoint; sources the package scripts in replication order.
@@ -138,10 +155,11 @@ The R workflow reads and harmonizes the newspaper-count inputs, prepares the mon
 | Summary Statistics: Monthly Article Counts | `Outputs/Annex/Tables/article_count_summary_statistics.tex` | `Code/figure_code/summary_statistics_table.R` |
 | Mean Correlations across Countries | `Outputs/Annex/Tables/benchmark_mean_correlations.tex` | `Code/figure_code/benchmark_indicator_correlation_table.R` |
 | Summary Statistics for All Dimensions | `Outputs/Annex/Tables/dimension_article_count_summary_statistics.tex` | `Code/figure_code/summary_statistics_table.R` |
+| Tables 3 to 7: Firm-level descriptive statistics and regressions | `Section_4.3/Tables/Table3_*` to `Table7_*` (`.tex`, `.doc`, `.rtf`) | `Section_4.3/NBS_Master.do` |
 
 ## Data Availability
 
-Availability of data and code: all data required to reproduce the documented package outputs are included in this repository.
+Availability of data and code: all data required to reproduce the documented package outputs are included in this repository, with one exception: the World Bank Enterprise Surveys microdata used in the firm-level application (`Section_4.3/`), described below.
 
 The authors had legitimate access to the bundled data and have included the materials required for this replication package. Code is distributed under the package [LICENSE](LICENSE). Bundled third-party data remain attributable to their original producers and should be cited accordingly when reused.
 
@@ -179,3 +197,9 @@ Macro-data source details recorded in the project bibliography:
 - IMF Data Portal: exchange rates, commodity export price indices, CPI, and policy rates. Source URL: `https://data.imf.org`. Bibliography entry: `IMFDataPortal`. Access date recorded in the bibliography: `12 November 2025`.
 - Global Scale Nightlight Time Series Dataset: nighttime lights. Source URL: `https://nightlight.eoatlas.org`. Access date recorded: `1 October 2025`.
 - World Development Indicators DataBank. Source URL: `http://databank.worldbank.org/data/reports.aspx?source=world-development-indicators` and access date `1 October 2025`.
+
+### Firm-Level Data (Section 4.3)
+
+- The annual NBS indicators and the World Development Indicators series used by `Section_4.3/NBS_Master.do` are bundled under `Section_4.3/Data/NBS data/` and `Section_4.3/Data/WDI/`.
+- The World Bank Enterprise Surveys microdata (`New_Comprehensive_May_5_2025.dta`) are **not included**. They are available free of charge after registration at `https://www.enterprisesurveys.org`, but the terms of use do not permit redistribution. Replicators must obtain the file themselves and place it in `Section_4.3/Data/WBES/`.
+- The analysis file `Section_4.3/Data/Finale_Data/Finale_Data.dta` is still firm-level microdata derived from the Enterprise Surveys and is therefore not included either; `NBS_Master.do` rebuilds it from the downloaded file.
