@@ -1,5 +1,7 @@
 # Replication Package: News-Based Multidimensional Political Instability
 
+**Authors:** Philipp Kronenberg (KOF, ETH Zurich), Kabinet Kaba (World Bank), Pierre Jean-Claude Mandon (World Bank, corresponding author)
+
 ## Overview
 
 This repository is the formal replication package for the paper on news-based multidimensional political instability in West and Central Africa. The package contains the code, data, and manuscript-facing outputs required for the documented replication workflow.
