@@ -187,7 +187,9 @@ df.cnts_long_monthly <- df.cnts_long %>%
   mutate(event_type = str_replace_all(event_type, 
                                       "Size of Legislature/Number of Seats, Largest Party \\(Scaling: 0\\.01\\)", 
                                       "Size of Legislature Scaled"
-  ))
+  )) %>%
+  # Keep CNTS riots separate from the ACLED "Riots" series
+  mutate(event_type = if_else(event_type == "Riots", "Riots (CNTS)", event_type))
   
 cnts_plot <- ggplot(df.cnts_long_monthly, aes(x = date, y = count, color = country)) +
   geom_line() +  # Create a line plot

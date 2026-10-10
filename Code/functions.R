@@ -154,6 +154,8 @@ correct_identifier <- function(data, country_code_col = NULL, country_name_col =
         !!country_name_col := case_when(
           .[[country_name_col]] == "Ivory Coast" ~ "Côte d'Ivoire",
           .[[country_name_col]] == "Cote d’Ivoire" ~ "Côte d'Ivoire",
+          .[[country_name_col]] == "Cote d'Ivoire" ~ "Côte d'Ivoire", # DPI, Gallup, CNTS
+          .[[country_name_col]] == "Côte d’Ivoire" ~ "Côte d'Ivoire", # ICRG
           .[[country_name_col]] == "Eq. Guinea" ~ "Equatorial Guinea",
           .[[country_name_col]] == "Central African Repub" ~ "Central African Republic",
           .[[country_name_col]] == "Cent. Af. Rep." ~ "Central African Republic", 
@@ -169,6 +171,9 @@ correct_identifier <- function(data, country_code_col = NULL, country_name_col =
           .[[country_name_col]] == "Congo, DR" ~ "DR Congo",
           .[[country_name_col]] == "Congo (DRC)" ~ "DR Congo",
           .[[country_name_col]] == "Congo, Dem. Rep." ~ "DR Congo",
+          .[[country_name_col]] == "Congo (KIN)" ~ "DR Congo",                # CNTS
+          .[[country_name_col]] == "Congo, Democratic Republic" ~ "DR Congo", # CNTS
+          .[[country_name_col]] == "Zaire" ~ "DR Congo",                      # CNTS
           TRUE ~ .[[country_name_col]]  # Keep all other values unchanged
         )
       )
