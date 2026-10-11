@@ -11,6 +11,18 @@ License summary:
 
 The package authors affirm that they had legitimate access to the bundled materials included in this repository and that the package may be redistributed in its current replication-package form.
 
+Third-party data included with permission:
+
+The following bundled data come from licensed or subscription sources. The authors' licenses and access agreements permit their inclusion in this replication package. Any further redistribution or reuse remains subject to the provider's terms and requires the user's own license or subscription.
+
+- Dow Jones Factiva: aggregated monthly article counts (`Data/Raw/restricted/factiva_api/`) and lookup files (`Data/Raw/restricted/factiva_lookup/`). No article text is included.
+- ACLED: event-data extract `Data/Raw/public/benchmark_data/ACLED/df_acled_in.rda`.
+- Cross-National Time-Series Data Archive (Databanks International): `Data/Raw/public/benchmark_data/CNTS Data Archive/2023_Edition_CNTSDATA.xlsx`.
+- Gallup World Poll (Gallup Analytics): country-level aggregates in `Data/Raw/public/benchmark_data/GALLUP/`.
+- International Country Risk Guide (The PRS Group): `Data/Raw/public/benchmark_data/ICRG sample (not free)/Barrett Replication Code/ICRG_CountryData.csv`.
+
+All other bundled third-party data are publicly available under open terms. Sources, access dates, and licenses for every dataset are listed in the Data Availability section of `README.md`.
+
 GNU GPL reference:
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.

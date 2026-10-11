@@ -35,7 +35,7 @@ install them beforehand with `ssc install <name>`.
 ├── NBS_Master.do
 ├── Data/
 │   ├── NBS data/NBS_indicators.xlsx   (included)
-│   ├── WDI/WDI_<series>.xlsx          (included; six workbooks, see §4.2)
+│   ├── WDI/WDI_<series>.xlsx          (included; six macro workbooks from WDI and IMF WEO, see §4.2)
 │   ├── WBES/New_Comprehensive_May_5_2025.dta   ← NOT included; download it yourself (§4.3)
 │   └── Finale_Data/                   ← created automatically; NOT included
 └── Tables/                            ← created automatically; the tables in the paper are included
@@ -84,8 +84,9 @@ A full run writes a plain-text log to `<PROJECT ROOT>/NBS_Master.log`.
 
 ## 4. Input data
 
-Three raw sources are required. The package includes two of them, the NBS indicators and the WDI
-series. **The third, the World Bank Enterprise Surveys firm-level data, cannot be redistributed and
+Three raw sources are required. The package includes two of them: the NBS indicators, and the
+country-level macro series (World Bank WDI and IMF World Economic Outlook). **The third, the World
+Bank Enterprise Surveys firm-level data, cannot be redistributed and
 has to be downloaded by the replicator** (§4.3). The same restriction covers `Finale_Data.dta`,
 which is still firm-level microdata: each row is one surveyed firm, carrying its identifier, survey
 weights and questionnaire answers. It is therefore not included, and `NBS_Master.do` rebuilds it
@@ -118,23 +119,32 @@ earliest survey waves keep their lagged values.
 file holds only the aggregated country-year indicators, which the main replication package also
 publishes (`Data/Derived/annual/NBS_indicators.csv`).
 
-### 4.2 World Development Indicators — `Data/WDI/WDI_<series>.xlsx`, sheet `Sheet1`
+### 4.2 Macro series (WDI and IMF WEO) — `Data/WDI/WDI_<series>.xlsx`, sheet `Sheet1`
 
-Six workbooks, one per series: `GDP_growth1`, `GDP1`, `GDPper1`, `GDPper_growth1`,
-`Exchange_Rate1`, `GDP_Deflator1`. Each in **wide** layout with the first row as variable names:
+Six workbooks, one per series. The folder and file names carry a `WDI_` prefix because
+`NBS_Master.do` reads them by those names, but the series come from two sources:
+
+- World Bank World Development Indicators: `GDP_growth1`, `GDP1`, `GDPper1`, `GDPper_growth1`,
+  `Exchange_Rate1`;
+- IMF World Economic Outlook, April 2024 edition: `GDP_Deflator1` (series `NGDP_D`).
+
+Each workbook is in **wide** layout with the first row as variable names:
 
 - one country-name column — the header may be `Country`, `CountryName`, `country`, `Economy` or a
   similar variant; the import routine detects it and standardises the name;
-- one column per year, named `x1960` through `x2024`.
+- one column per year, named `x<year>` (`x1960`–`x2024` for the WDI series; `x1980`–`x2029` for
+  the WEO deflator, which includes IMF projections).
 
 The exchange rate and the GDP deflator convert firm turnover into constant-price US dollars; the
 GDP series enter as country-level controls at the *t*−1 and *t*−3 lags.
 
-*Access:* public, from the World Bank WDI portal. Included.
+*Access:* public, free to use with attribution. Included. Download instructions, series codes,
+access dates and citations are in the Data Availability section of the top-level README
+(datasets 16 and 16b).
 
 ### 4.3 World Bank Enterprise Surveys — `Data/WBES/New_Comprehensive_May_5_2025.dta`
 
-The harmonized global WBES panel, 2006–2024 waves.
+The harmonized global WBES raw-data file, release of 5 May 2025, covering survey years 2006–2025. The only 2025 waves are Poland and Trinidad and Tobago; the latest waves for the sample countries are from 2023–2024.
 
 | Group | Variables |
 |---|---|
@@ -197,7 +207,7 @@ unescaped `$` in a Stata string triggers macro expansion.
 | Part | What it does |
 |---|---|
 | I | NBS indicators: import, build the *t*−1 to *t*−3 lags, attach ISO3 codes |
-| II | WDI: import six workbooks, harmonise country names to ISO3, assemble `WDI_Database.dta` |
+| II | Macro data (WDI and IMF WEO): import six workbooks, harmonise country names to ISO3, assemble `WDI_Database.dta` |
 | III | WBES: import, parse `Year` and `Country` from the survey id, merge macro and NBS data on `iso3c`–`Year` |
 | IV | Recode missing values, remove outliers, convert and winsorize sales, build outcomes and controls, standardize, save `Finale_Data.dta` |
 | V–IX | Tables 3 to 7 |
